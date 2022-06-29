@@ -49,6 +49,7 @@ INT32: \
 \- KError\_CantConnectKernel, failed, unable to connect to the EDFS file system kernel (only valid for Native dapp development). \
 \- KError\_Other, failed, other errors;
 
+<details>
 <summary>GO</summary>  
 
   #### Responses:
