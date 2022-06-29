@@ -29,3 +29,11 @@ INT32: KError\_Success success KError\_CantConnectKernel, failed, unable to conn
 
 {% endswagger-description %}
 {% endswagger %}
+
+<details>
+
+<summary>sdf</summary>
+
+#### Responses
+
+</details>
