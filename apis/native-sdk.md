@@ -28,7 +28,7 @@ INT32: KError\_Success success KError\_CantConnectKernel, failed, unable to conn
 
 
 
-{% swagger method="get" path="" baseUrl="" summary="" %}
+{% swagger method="" path="" baseUrl="" summary="" %}
 {% swagger-description %}
 
 {% endswagger-description %}
