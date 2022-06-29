@@ -32,8 +32,22 @@ INT32: KError\_Success success KError\_CantConnectKernel, failed, unable to conn
 
 <details>
 
-<summary>sdf</summary>
+<summary>INT32 TSK_Init();</summary>
 
-#### Responses
+```
+INT32 TSK_Init();
+```
+
+#### Responses:
+
+none
+
+#### Return Value:
+
+INT32: \
+\- KError\_Success success \
+\- KError\_CantConnectKernel, failed, unable to connect to the EDFS file system kernel (only valid for Native dapp development). \
+\- KError\_Other, failed, other errors;
 
 </details>
+
