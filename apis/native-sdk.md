@@ -1,7 +1,5 @@
 # Native SDK
 
-
-
 ```
 The APP development team and developers can directly learn and understand the EDFS underlying protocol, and complete the development of NativeApp by integrating the EDFS underlying Native SDK. Readers can read this development manual to understand all the interfaces open to the outside world by the EDFS underlying SDK, as well as the interface descriptions, and complete the development of Native APPs that conform to the EDFS protocol specifications.
 ```
@@ -26,11 +24,8 @@ Return value:
 
 INT32: KError\_Success success KError\_CantConnectKernel, failed, unable to connect to the EDFS file system kernel (only valid for Native dapp development). KError\_Other, failed, other errors;
 
-
-
-{% path="INT32 TSK_Init();" baseUrl="" summary="" %}
+{% swagger method="get" path="" baseUrl="" summary="" %}
 {% swagger-description %}
 
 {% endswagger-description %}
 {% endswagger %}
-
