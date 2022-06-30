@@ -99,15 +99,21 @@ Initialize the EDFS-SDK Native library.
 INT32 TSK_Init();
 ```
 
-#### Parameters:
+<details>
+
+<summary>Parameters</summary>
 
 none
 
-#### Return Values:
+</details>
+
+<details>
+
+<summary>Return Values</summary>
 
 none
 
-### Initialize Toolkit
+</details>### Digest Interface
 
 Initialize the EDFS-SDK Native library.
 
@@ -115,15 +121,21 @@ Initialize the EDFS-SDK Native library.
 INT32 TSK_Init();
 ```
 
-#### Parameters:
+<details>
+
+<summary>Parameters</summary>
 
 none
 
-#### Return Values:
+</details>
+
+<details>
+
+<summary>Return Values</summary>
 
 none
 
-### Initialize Toolkit
+</details>### Digest Interface
 
 Initialize the EDFS-SDK Native library.
 
@@ -131,15 +143,21 @@ Initialize the EDFS-SDK Native library.
 INT32 TSK_Init();
 ```
 
-#### Parameters:
+<details>
+
+<summary>Parameters</summary>
 
 none
 
-#### Return Values:
+</details>
+
+<details>
+
+<summary>Return Values</summary>
 
 none
 
-### Initialize Toolkit
+</details>### Digest Interface
 
 Initialize the EDFS-SDK Native library.
 
@@ -147,15 +165,21 @@ Initialize the EDFS-SDK Native library.
 INT32 TSK_Init();
 ```
 
-#### Parameters:
+<details>
+
+<summary>Parameters</summary>
 
 none
 
-#### Return Values:
+</details>
+
+<details>
+
+<summary>Return Values</summary>
 
 none
 
-### Initialize Toolkit
+</details>### Digest Interface
 
 Initialize the EDFS-SDK Native library.
 
@@ -163,15 +187,21 @@ Initialize the EDFS-SDK Native library.
 INT32 TSK_Init();
 ```
 
-#### Parameters:
+<details>
+
+<summary>Parameters</summary>
 
 none
 
-#### Return Values:
+</details>
+
+<details>
+
+<summary>Return Values</summary>
 
 none
 
-### Initialize Toolkit
+</details>### Digest Interface
 
 Initialize the EDFS-SDK Native library.
 
@@ -179,15 +209,21 @@ Initialize the EDFS-SDK Native library.
 INT32 TSK_Init();
 ```
 
-#### Parameters:
+<details>
+
+<summary>Parameters</summary>
 
 none
 
-#### Return Values:
+</details>
+
+<details>
+
+<summary>Return Values</summary>
 
 none
 
-### Initialize Toolkit
+</details>### Digest Interface
 
 Initialize the EDFS-SDK Native library.
 
@@ -195,15 +231,21 @@ Initialize the EDFS-SDK Native library.
 INT32 TSK_Init();
 ```
 
-#### Parameters:
+<details>
+
+<summary>Parameters</summary>
 
 none
 
-#### Return Values:
+</details>
+
+<details>
+
+<summary>Return Values</summary>
 
 none
 
-### Initialize Toolkit
+</details>### Digest Interface
 
 Initialize the EDFS-SDK Native library.
 
@@ -211,15 +253,21 @@ Initialize the EDFS-SDK Native library.
 INT32 TSK_Init();
 ```
 
-#### Parameters:
+<details>
+
+<summary>Parameters</summary>
 
 none
 
-#### Return Values:
+</details>
+
+<details>
+
+<summary>Return Values</summary>
 
 none
 
-### Initialize Toolkit
+</details>### Digest Interface
 
 Initialize the EDFS-SDK Native library.
 
@@ -227,15 +275,21 @@ Initialize the EDFS-SDK Native library.
 INT32 TSK_Init();
 ```
 
-#### Parameters:
+<details>
+
+<summary>Parameters</summary>
 
 none
 
-#### Return Values:
+</details>
+
+<details>
+
+<summary>Return Values</summary>
 
 none
 
-### Initialize Toolkit
+</details>### Digest Interface
 
 Initialize the EDFS-SDK Native library.
 
@@ -243,15 +297,21 @@ Initialize the EDFS-SDK Native library.
 INT32 TSK_Init();
 ```
 
-#### Parameters:
+<details>
+
+<summary>Parameters</summary>
 
 none
 
-#### Return Values:
+</details>
+
+<details>
+
+<summary>Return Values</summary>
 
 none
 
-### Initialize Toolkit
+</details>### Digest Interface
 
 Initialize the EDFS-SDK Native library.
 
@@ -259,15 +319,21 @@ Initialize the EDFS-SDK Native library.
 INT32 TSK_Init();
 ```
 
-#### Parameters:
+<details>
+
+<summary>Parameters</summary>
 
 none
 
-#### Return Values:
+</details>
+
+<details>
+
+<summary>Return Values</summary>
 
 none
 
-### Initialize Toolkit
+</details>### Digest Interface
 
 Initialize the EDFS-SDK Native library.
 
@@ -275,15 +341,21 @@ Initialize the EDFS-SDK Native library.
 INT32 TSK_Init();
 ```
 
-#### Parameters:
+<details>
+
+<summary>Parameters</summary>
 
 none
 
-#### Return Values:
+</details>
+
+<details>
+
+<summary>Return Values</summary>
 
 none
 
-### Initialize Toolkit
+</details>### Digest Interface
 
 Initialize the EDFS-SDK Native library.
 
@@ -291,15 +363,21 @@ Initialize the EDFS-SDK Native library.
 INT32 TSK_Init();
 ```
 
-#### Parameters:
+<details>
+
+<summary>Parameters</summary>
 
 none
 
-#### Return Values:
+</details>
+
+<details>
+
+<summary>Return Values</summary>
 
 none
 
-### Initialize Toolkit
+</details>### Digest Interface
 
 Initialize the EDFS-SDK Native library.
 
@@ -307,15 +385,21 @@ Initialize the EDFS-SDK Native library.
 INT32 TSK_Init();
 ```
 
-#### Parameters:
+<details>
+
+<summary>Parameters</summary>
 
 none
 
-#### Return Values:
+</details>
+
+<details>
+
+<summary>Return Values</summary>
 
 none
 
-### Initialize Toolkit
+</details>### Digest Interface
 
 Initialize the EDFS-SDK Native library.
 
@@ -323,26 +407,18 @@ Initialize the EDFS-SDK Native library.
 INT32 TSK_Init();
 ```
 
-#### Parameters:
+<details>
+
+<summary>Parameters</summary>
 
 none
 
-#### Return Values:
+</details>
+
+<details>
+
+<summary>Return Values</summary>
 
 none
 
-### Initialize Toolkit
-
-Initialize the EDFS-SDK Native library.
-
-```
-INT32 TSK_Init();
-```
-
-#### Parameters:
-
-none
-
-#### Return Values:
-
-none
+</details>
