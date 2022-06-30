@@ -8,9 +8,59 @@ EDFS-SDK is developed in C++ language and provides full platform support, includ
 
 The EDFS-SDK library also provides corresponding support for some language which does not support calling C++ modules directly. For example, for JAVA language development, the EDFS-SDK library provides special JNI interface to support. EDFS-SDK also provides corresponding support for languages that do not support C++ specific features, such as GO language. If the development language you use has obstacles to call the EDFS-SDK library, please contact the EDFS development team, and we will develop and support it. There will be separate SDK documentation for each language, which you can refer to accordingly.
 
-#### Initializing Toolkit
+#### Initialize Toolkit
 
 Initialize the EDFS-SDK Native library.
+
+{% tabs %}
+{% tab title="C++" %}
+```
+INT32 TSK_Init();
+```
+
+**Parameters:**
+
+none
+
+**Return Value:**
+
+* INT32:&#x20;
+  * KError\_Success success&#x20;
+  * KError\_CantConnectKernel, failed, unable to connect to the EDFS file system kernel (only valid for Native dapp development).&#x20;
+  * KError\_Other, failed, other errors;
+{% endtab %}
+
+{% tab title="Java" %}
+```
+```
+
+**Parameters:**
+
+none
+
+**Return Value:**
+
+none
+{% endtab %}
+
+{% tab title="GO" %}
+```
+// Some code
+```
+
+**Parameters:**
+
+none
+
+**Return Value:**
+
+none
+{% endtab %}
+{% endtabs %}
+
+#### Uninitialize Toolkit
+
+Reverse the initialization of the EDFS-SDK Native library.
 
 {% tabs %}
 {% tab title="C++" %}
@@ -18,45 +68,41 @@ Initialize the EDFS-SDK Native library.
 // Some code
 ```
 
-#### Parameters:
+**Parameters:**
 
 none
 
-#### Return Value:
+**Return Value:**
 
 none
 {% endtab %}
 
 {% tab title="Java" %}
-
 ```
 // Some code
 ```
 
-#### Parameters:
+**Parameters:**
 
 none
 
-#### Return Value:
+**Return Value:**
 
 none
-
 {% endtab %}
 
 {% tab title="GO" %}
-
 ```
 // Some code
 ```
 
-#### Parameters:
+**Parameters:**
 
 none
 
-#### Return Value:
+**Return Value:**
 
 none
-
 {% endtab %}
 {% endtabs %}
 
@@ -70,45 +116,41 @@ Initialize the EDFS-SDK Native library.
 // Some code
 ```
 
-#### Parameters:
+**Parameters:**
 
 none
 
-#### Return Value:
+**Return Value:**
 
 none
 {% endtab %}
 
 {% tab title="Java" %}
-
 ```
 // Some code
 ```
 
-#### Parameters:
+**Parameters:**
 
 none
 
-#### Return Value:
+**Return Value:**
 
 none
-
 {% endtab %}
 
 {% tab title="GO" %}
-
 ```
 // Some code
 ```
 
-#### Parameters:
+**Parameters:**
 
 none
 
-#### Return Value:
+**Return Value:**
 
 none
-
 {% endtab %}
 {% endtabs %}
 
@@ -122,45 +164,41 @@ Initialize the EDFS-SDK Native library.
 // Some code
 ```
 
-#### Parameters:
+**Parameters:**
 
 none
 
-#### Return Value:
+**Return Value:**
 
 none
 {% endtab %}
 
 {% tab title="Java" %}
-
 ```
 // Some code
 ```
 
-#### Parameters:
+**Parameters:**
 
 none
 
-#### Return Value:
+**Return Value:**
 
 none
-
 {% endtab %}
 
 {% tab title="GO" %}
-
 ```
 // Some code
 ```
 
-#### Parameters:
+**Parameters:**
 
 none
 
-#### Return Value:
+**Return Value:**
 
 none
-
 {% endtab %}
 {% endtabs %}
 
@@ -174,45 +212,41 @@ Initialize the EDFS-SDK Native library.
 // Some code
 ```
 
-#### Parameters:
+**Parameters:**
 
 none
 
-#### Return Value:
+**Return Value:**
 
 none
 {% endtab %}
 
 {% tab title="Java" %}
-
 ```
 // Some code
 ```
 
-#### Parameters:
+**Parameters:**
 
 none
 
-#### Return Value:
+**Return Value:**
 
 none
-
 {% endtab %}
 
 {% tab title="GO" %}
-
 ```
 // Some code
 ```
 
-#### Parameters:
+**Parameters:**
 
 none
 
-#### Return Value:
+**Return Value:**
 
 none
-
 {% endtab %}
 {% endtabs %}
 
@@ -226,45 +260,41 @@ Initialize the EDFS-SDK Native library.
 // Some code
 ```
 
-#### Parameters:
+**Parameters:**
 
 none
 
-#### Return Value:
+**Return Value:**
 
 none
 {% endtab %}
 
 {% tab title="Java" %}
-
 ```
 // Some code
 ```
 
-#### Parameters:
+**Parameters:**
 
 none
 
-#### Return Value:
+**Return Value:**
 
 none
-
 {% endtab %}
 
 {% tab title="GO" %}
-
 ```
 // Some code
 ```
 
-#### Parameters:
+**Parameters:**
 
 none
 
-#### Return Value:
+**Return Value:**
 
 none
-
 {% endtab %}
 {% endtabs %}
 
@@ -278,45 +308,41 @@ Initialize the EDFS-SDK Native library.
 // Some code
 ```
 
-#### Parameters:
+**Parameters:**
 
 none
 
-#### Return Value:
+**Return Value:**
 
 none
 {% endtab %}
 
 {% tab title="Java" %}
-
 ```
 // Some code
 ```
 
-#### Parameters:
+**Parameters:**
 
 none
 
-#### Return Value:
+**Return Value:**
 
 none
-
 {% endtab %}
 
 {% tab title="GO" %}
-
 ```
 // Some code
 ```
 
-#### Parameters:
+**Parameters:**
 
 none
 
-#### Return Value:
+**Return Value:**
 
 none
-
 {% endtab %}
 {% endtabs %}
 
@@ -330,45 +356,41 @@ Initialize the EDFS-SDK Native library.
 // Some code
 ```
 
-#### Parameters:
+**Parameters:**
 
 none
 
-#### Return Value:
+**Return Value:**
 
 none
 {% endtab %}
 
 {% tab title="Java" %}
-
 ```
 // Some code
 ```
 
-#### Parameters:
+**Parameters:**
 
 none
 
-#### Return Value:
+**Return Value:**
 
 none
-
 {% endtab %}
 
 {% tab title="GO" %}
-
 ```
 // Some code
 ```
 
-#### Parameters:
+**Parameters:**
 
 none
 
-#### Return Value:
+**Return Value:**
 
 none
-
 {% endtab %}
 {% endtabs %}
 
@@ -382,45 +404,41 @@ Initialize the EDFS-SDK Native library.
 // Some code
 ```
 
-#### Parameters:
+**Parameters:**
 
 none
 
-#### Return Value:
+**Return Value:**
 
 none
 {% endtab %}
 
 {% tab title="Java" %}
-
 ```
 // Some code
 ```
 
-#### Parameters:
+**Parameters:**
 
 none
 
-#### Return Value:
+**Return Value:**
 
 none
-
 {% endtab %}
 
 {% tab title="GO" %}
-
 ```
 // Some code
 ```
 
-#### Parameters:
+**Parameters:**
 
 none
 
-#### Return Value:
+**Return Value:**
 
 none
-
 {% endtab %}
 {% endtabs %}
 
@@ -434,96 +452,40 @@ Initialize the EDFS-SDK Native library.
 // Some code
 ```
 
-#### Parameters:
+**Parameters:**
 
 none
 
-#### Return Value:
-
-none
-{% endtab %}
-
-{% tab title="Java" %}
-
-```
-// Some code
-```
-
-#### Parameters:
-
-none
-
-#### Return Value:
-
-none
-
-{% endtab %}
-
-{% tab title="GO" %}
-
-```
-// Some code
-```
-
-#### Parameters:
-
-none
-
-#### Return Value:
-
-none
-
-{% endtab %}
-{% endtabs %}
-
-#### Initializing Toolkit
-
-Initialize the EDFS-SDK Native library.
-
-{% tabs %}
-{% tab title="C++" %}
-```
-// Some code
-```
-
-#### Parameters:
-
-none
-
-#### Return Value:
+**Return Value:**
 
 none
 {% endtab %}
 
 {% tab title="Java" %}
-
 ```
 // Some code
 ```
 
-#### Parameters:
+**Parameters:**
 
 none
 
-#### Return Value:
+**Return Value:**
 
 none
-
 {% endtab %}
 
 {% tab title="GO" %}
-
 ```
 // Some code
 ```
 
-#### Parameters:
+**Parameters:**
 
 none
 
-#### Return Value:
+**Return Value:**
 
 none
-
 {% endtab %}
 {% endtabs %}

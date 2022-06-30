@@ -7,4 +7,7 @@
 
 ## APIs
 
-* [Native SDK](apis/native-sdk.md)
+* [Native SDK](apis/native-sdk/README.md)
+  * [C++](apis/native-sdk/c++.md)
+  * [Java](apis/native-sdk/java.md)
+  * [GO](apis/native-sdk/go.md)
