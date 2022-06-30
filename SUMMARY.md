@@ -1,6 +1,7 @@
 # Table of contents
 
 * [Developer Docs](README.md)
+* [Local Environment](local-environment.md)
 * [Nela Test Net](nela-test-net.md)
 * [Getting Started](getting-started.md)
 * [Tutorials](tutorials.md)
@@ -14,5 +15,7 @@
     * [Identity Algorithm Interface](apis/native-sdk/c++/identity-algorithm-interface.md)
     * [Symmetric Algorithm Interface](apis/native-sdk/c++/symmetric-algorithm-interface.md)
     * [Account Interface](apis/native-sdk/c++/account-interface.md)
+    * [File Operation Interface](apis/native-sdk/c++/file-operation-interface.md)
+    * [LocalService Interface](apis/native-sdk/c++/localservice-interface.md)
   * [Java](apis/native-sdk/java.md)
   * [GO](apis/native-sdk/go.md)
