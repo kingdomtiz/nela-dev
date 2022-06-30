@@ -1,4 +1,4 @@
-# C++
+# Basic Interface
 
 ### Initialize Toolkit
 
@@ -21,8 +21,8 @@ none
 <summary>Return Values</summary>
 
 * INT32
-  * KError\_Success success&#x20;
-  * KError\_CantConnectKernel, failed, unable to connect to the EDFS file system kernel (only valid for Native dapp development).&#x20;
+  * KError\_Success success
+  * KError\_CantConnectKernel, failed, unable to connect to the EDFS file system kernel (only valid for Native dapp development).
   * KError\_Other, failed, other errors;
 
 </details>
@@ -93,7 +93,17 @@ The EDFS Native SDK library has a built-in random number generator, which can ge
 
 ### Digest Interface
 
-Initialize the EDFS-SDK Native library.
+The EDFS-SDK library provides a variety of digest interfaces, such as fast CRC digest, secure MD5 and SHA256 digest algorithms. The EDFS-SDK library uses the MD5 digest internally to sign the required encrypted digital files. Data can be digested externally by using the digest interface provided by the EDFS-SDK library.
+
+EDFS-SDK digests externally specified data through a unified data stream digest method, and supports multiple external calls to digest algorithms to jointly digest a piece of super-long data. The same digest process is identified by a specified cookie.&#x20;
+
+A typical digest process is as follows:
+
+* Joint digests of multiple streams are supported with digest cookie pointer not NULL.
+* The cookie is obtained when the digest is started, and the value remains unchanged until the digest is ended.
+* In short, the judgment is based on: when the stream pointer is empty, it means the start of the digest or the end of the digest;
+  * When the stream pointer is not null, the stream is digested.
+  * When the stream pointer is empty, it is the start digest if the value in pCookie is also NULL, and the end digest if the value in pCookie is not NULL.
 
 ```
 INT32 TSK_Init();
@@ -113,51 +123,9 @@ none
 
 none
 
-</details>### Digest Interface
-
-Initialize the EDFS-SDK Native library.
-
-```
-INT32 TSK_Init();
-```
-
-<details>
-
-<summary>Parameters</summary>
-
-none
-
 </details>
 
-<details>
-
-<summary>Return Values</summary>
-
-none
-
-</details>### Digest Interface
-
-Initialize the EDFS-SDK Native library.
-
-```
-INT32 TSK_Init();
-```
-
-<details>
-
-<summary>Parameters</summary>
-
-none
-
-</details>
-
-<details>
-
-<summary>Return Values</summary>
-
-none
-
-</details>### Digest Interface
+\### Digest Interface
 
 Initialize the EDFS-SDK Native library.
 
@@ -179,7 +147,9 @@ none
 
 none
 
-</details>### Digest Interface
+</details>
+
+\### Digest Interface
 
 Initialize the EDFS-SDK Native library.
 
@@ -201,7 +171,9 @@ none
 
 none
 
-</details>### Digest Interface
+</details>
+
+\### Digest Interface
 
 Initialize the EDFS-SDK Native library.
 
@@ -223,7 +195,9 @@ none
 
 none
 
-</details>### Digest Interface
+</details>
+
+\### Digest Interface
 
 Initialize the EDFS-SDK Native library.
 
@@ -245,7 +219,9 @@ none
 
 none
 
-</details>### Digest Interface
+</details>
+
+\### Digest Interface
 
 Initialize the EDFS-SDK Native library.
 
@@ -267,7 +243,9 @@ none
 
 none
 
-</details>### Digest Interface
+</details>
+
+\### Digest Interface
 
 Initialize the EDFS-SDK Native library.
 
@@ -289,7 +267,9 @@ none
 
 none
 
-</details>### Digest Interface
+</details>
+
+\### Digest Interface
 
 Initialize the EDFS-SDK Native library.
 
@@ -311,7 +291,9 @@ none
 
 none
 
-</details>### Digest Interface
+</details>
+
+\### Digest Interface
 
 Initialize the EDFS-SDK Native library.
 
@@ -333,7 +315,9 @@ none
 
 none
 
-</details>### Digest Interface
+</details>
+
+\### Digest Interface
 
 Initialize the EDFS-SDK Native library.
 
@@ -355,7 +339,9 @@ none
 
 none
 
-</details>### Digest Interface
+</details>
+
+\### Digest Interface
 
 Initialize the EDFS-SDK Native library.
 
@@ -377,7 +363,9 @@ none
 
 none
 
-</details>### Digest Interface
+</details>
+
+\### Digest Interface
 
 Initialize the EDFS-SDK Native library.
 
@@ -399,7 +387,57 @@ none
 
 none
 
-</details>### Digest Interface
+</details>
+
+\### Digest Interface
+
+Initialize the EDFS-SDK Native library.
+
+```
+INT32 TSK_Init();
+```
+
+<details>
+
+<summary>Parameters</summary>
+
+none
+
+</details>
+
+<details>
+
+<summary>Return Values</summary>
+
+none
+
+</details>
+
+\### Digest Interface
+
+Initialize the EDFS-SDK Native library.
+
+```
+INT32 TSK_Init();
+```
+
+<details>
+
+<summary>Parameters</summary>
+
+none
+
+</details>
+
+<details>
+
+<summary>Return Values</summary>
+
+none
+
+</details>
+
+\### Digest Interface
 
 Initialize the EDFS-SDK Native library.
 
