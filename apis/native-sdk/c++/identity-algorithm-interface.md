@@ -224,7 +224,21 @@ INT32 TSK_IdentityEncrypt(IdentityObject identity, BYTE cryptAction, UINT32 nSrc
 <summary>Parameters</summary>
 
 * IdentityObject
-  * identity - the identity object to release (opaque semantics) \[IN]
+  * identity - the identity object (opaque) being used \[IN]
+* CHAR
+  * cryptAction - the action selected: \[IN]&#x20;
+    * 1 means public key&#x20;
+    * 2 means private key
+* UINT32
+  * nSrcFlowLen - specifies the buffer length of the original stream \[IN]
+* CHAR \*
+  * pSrcFlow - specifies the raw stream buffer \[IN]
+* UINT32
+  * nTarFlowLen - specifies the buffer length of the target stream after receiving processing \[IN/OUT]
+* CHAR \*
+  * pTarFlow - specifies the buffer area for receiving the processed target stream \[IN/OUT]
+* UINT32 \*
+  * pTarFlowReturnLen - the length of the returned target stream \[OUT]
 
 </details>
 
@@ -234,21 +248,26 @@ INT32 TSK_IdentityEncrypt(IdentityObject identity, BYTE cryptAction, UINT32 nSrc
 
 * INT32
   * KError\_Success success
+  * KError\_Other, other errors, usually memory allocation errors (or insufficient buffers)
 
 </details>
 
 {% hint style="info" %}
-Corresponding to the TSK\_IdentityIssue function, an opaque semantic user identity is generated externally through the TSK\_IdentityIssue function. After use, the Free interface needs to be called to release the memory space occupied by the opaque semantic user identity object, following the principle of whoever applies, whoever releases.
+Based on the characteristics of the ECC256 algorithm, each ECC256 encryption is in units of 64 bytes, which are transparent to the outside world.
+
+​Data of any length can be passed in from the outside, and the interface will encrypt the data in 64-byte cycles and return the total encrypted data to the external, the buffer for receiving the encrypted result should be of sufficient length and prepared in the ratio of original data/encrypted data 64/154.
+
+​The ECC encryption algorithm supports the use of public or private keys to perform encryption operations on data. Specifying the public key for encryption is to perform an encryption operation on the data to be encrypted, and specifying the private key for encryption is actually to perform a digital signature operation on the encrypted data.
+
+​If the incoming identity object only contains public key information, the private key encryption operation cannot be supported. If the incoming identity object contains private key information, both public and private key encryption/signature operations are supported.
 {% endhint %}
 
+### Decryption/Verification with Identity Objects
 
-
-### se an Identity Object
-
-Release an identity object.
+Perform decrypt/verify operations using identity objects.
 
 ```
-INT32 TSK_IdentityFree(IdentityObject identity);
+INT32 TSK_IdentityDecrypt(IdentityObject identity, BYTE cryptAction, UINT32 nSrcFlowLen, BYTE * pSrcFlow, UINT32 nTarFlowLen, BYTE * pTarFlow, UINT32 * pTarFlowReturnLen);
 ```
 
 <details>
@@ -256,7 +275,21 @@ INT32 TSK_IdentityFree(IdentityObject identity);
 <summary>Parameters</summary>
 
 * IdentityObject
-  * identity - the identity object to release (opaque semantics) \[IN]
+  * identity - the identity object (opaque) to be used \[IN]
+* CHAR
+  * cryptAction - the operation selection: \[IN]&#x20;
+    * 1 means decryption with the public key (sign verification),&#x20;
+    * 2 means decryption with the private key
+* UINT32
+  * nSrcFlowLen - specifies the buffer length of the original stream \[IN]
+* CHAR \*
+  * pSrcFlow - specifies the raw stream buffer \[IN]
+* UINT32
+  * nTarFlowLen - specifies the buffer length of the target stream after receiving processing \[IN/OUT]
+* CHAR \*
+  * pTarFlow - specifies the buffer area for receiving the processed target stream \[IN/OUT]
+* UINT32 \*
+  * pTarFlowReturnLen - the length of the returned target stream \[OUT]
 
 </details>
 
@@ -266,9 +299,10 @@ INT32 TSK_IdentityFree(IdentityObject identity);
 
 * INT32
   * KError\_Success success
+  * KError\_Other, other errors, usually memory allocation errors (or insufficient buffers)
 
 </details>
 
 {% hint style="info" %}
-Corresponding to the TSK\_IdentityIssue function, an opaque semantic user identity is generated externally through the TSK\_IdentityIssue function. After use, the Free interface needs to be called to release the memory space occupied by the opaque semantic user identity object, following the principle of whoever applies, whoever releases.
+The buffer to receive the decrypted result should be of sufficient length, in the ratio of original data/decrypted data 154/64.
 {% endhint %}
