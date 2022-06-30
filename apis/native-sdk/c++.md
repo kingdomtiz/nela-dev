@@ -1,14 +1,12 @@
 # C++
 
-#### Initialize Toolkit
+### Initialize Toolkit
+
+Initialize the EDFS-SDK Native library.
 
 ```
-// Some code
+INT32 TSK_Init();
 ```
-
-<details>
-
-<summary></summary>
 
 #### Parameters:
 
@@ -17,5 +15,3 @@ none
 #### Return Values:
 
 none
-
-</details>
