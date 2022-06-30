@@ -29,10 +29,501 @@ none
 
 {% tab title="Java" %}
 
+```
+// Some code
+```
+
+#### Parameters:
+
+none
+
+#### Return Value:
+
+none
+
 {% endtab %}
 
 {% tab title="GO" %}
 
+```
+// Some code
+```
+
+#### Parameters:
+
+none
+
+#### Return Value:
+
+none
+
 {% endtab %}
 {% endtabs %}
 
+#### Initializing Toolkit
+
+Initialize the EDFS-SDK Native library.
+
+{% tabs %}
+{% tab title="C++" %}
+```
+// Some code
+```
+
+#### Parameters:
+
+none
+
+#### Return Value:
+
+none
+{% endtab %}
+
+{% tab title="Java" %}
+
+```
+// Some code
+```
+
+#### Parameters:
+
+none
+
+#### Return Value:
+
+none
+
+{% endtab %}
+
+{% tab title="GO" %}
+
+```
+// Some code
+```
+
+#### Parameters:
+
+none
+
+#### Return Value:
+
+none
+
+{% endtab %}
+{% endtabs %}
+
+#### Initializing Toolkit
+
+Initialize the EDFS-SDK Native library.
+
+{% tabs %}
+{% tab title="C++" %}
+```
+// Some code
+```
+
+#### Parameters:
+
+none
+
+#### Return Value:
+
+none
+{% endtab %}
+
+{% tab title="Java" %}
+
+```
+// Some code
+```
+
+#### Parameters:
+
+none
+
+#### Return Value:
+
+none
+
+{% endtab %}
+
+{% tab title="GO" %}
+
+```
+// Some code
+```
+
+#### Parameters:
+
+none
+
+#### Return Value:
+
+none
+
+{% endtab %}
+{% endtabs %}
+
+#### Initializing Toolkit
+
+Initialize the EDFS-SDK Native library.
+
+{% tabs %}
+{% tab title="C++" %}
+```
+// Some code
+```
+
+#### Parameters:
+
+none
+
+#### Return Value:
+
+none
+{% endtab %}
+
+{% tab title="Java" %}
+
+```
+// Some code
+```
+
+#### Parameters:
+
+none
+
+#### Return Value:
+
+none
+
+{% endtab %}
+
+{% tab title="GO" %}
+
+```
+// Some code
+```
+
+#### Parameters:
+
+none
+
+#### Return Value:
+
+none
+
+{% endtab %}
+{% endtabs %}
+
+#### Initializing Toolkit
+
+Initialize the EDFS-SDK Native library.
+
+{% tabs %}
+{% tab title="C++" %}
+```
+// Some code
+```
+
+#### Parameters:
+
+none
+
+#### Return Value:
+
+none
+{% endtab %}
+
+{% tab title="Java" %}
+
+```
+// Some code
+```
+
+#### Parameters:
+
+none
+
+#### Return Value:
+
+none
+
+{% endtab %}
+
+{% tab title="GO" %}
+
+```
+// Some code
+```
+
+#### Parameters:
+
+none
+
+#### Return Value:
+
+none
+
+{% endtab %}
+{% endtabs %}
+
+#### Initializing Toolkit
+
+Initialize the EDFS-SDK Native library.
+
+{% tabs %}
+{% tab title="C++" %}
+```
+// Some code
+```
+
+#### Parameters:
+
+none
+
+#### Return Value:
+
+none
+{% endtab %}
+
+{% tab title="Java" %}
+
+```
+// Some code
+```
+
+#### Parameters:
+
+none
+
+#### Return Value:
+
+none
+
+{% endtab %}
+
+{% tab title="GO" %}
+
+```
+// Some code
+```
+
+#### Parameters:
+
+none
+
+#### Return Value:
+
+none
+
+{% endtab %}
+{% endtabs %}
+
+#### Initializing Toolkit
+
+Initialize the EDFS-SDK Native library.
+
+{% tabs %}
+{% tab title="C++" %}
+```
+// Some code
+```
+
+#### Parameters:
+
+none
+
+#### Return Value:
+
+none
+{% endtab %}
+
+{% tab title="Java" %}
+
+```
+// Some code
+```
+
+#### Parameters:
+
+none
+
+#### Return Value:
+
+none
+
+{% endtab %}
+
+{% tab title="GO" %}
+
+```
+// Some code
+```
+
+#### Parameters:
+
+none
+
+#### Return Value:
+
+none
+
+{% endtab %}
+{% endtabs %}
+
+#### Initializing Toolkit
+
+Initialize the EDFS-SDK Native library.
+
+{% tabs %}
+{% tab title="C++" %}
+```
+// Some code
+```
+
+#### Parameters:
+
+none
+
+#### Return Value:
+
+none
+{% endtab %}
+
+{% tab title="Java" %}
+
+```
+// Some code
+```
+
+#### Parameters:
+
+none
+
+#### Return Value:
+
+none
+
+{% endtab %}
+
+{% tab title="GO" %}
+
+```
+// Some code
+```
+
+#### Parameters:
+
+none
+
+#### Return Value:
+
+none
+
+{% endtab %}
+{% endtabs %}
+
+#### Initializing Toolkit
+
+Initialize the EDFS-SDK Native library.
+
+{% tabs %}
+{% tab title="C++" %}
+```
+// Some code
+```
+
+#### Parameters:
+
+none
+
+#### Return Value:
+
+none
+{% endtab %}
+
+{% tab title="Java" %}
+
+```
+// Some code
+```
+
+#### Parameters:
+
+none
+
+#### Return Value:
+
+none
+
+{% endtab %}
+
+{% tab title="GO" %}
+
+```
+// Some code
+```
+
+#### Parameters:
+
+none
+
+#### Return Value:
+
+none
+
+{% endtab %}
+{% endtabs %}
+
+#### Initializing Toolkit
+
+Initialize the EDFS-SDK Native library.
+
+{% tabs %}
+{% tab title="C++" %}
+```
+// Some code
+```
+
+#### Parameters:
+
+none
+
+#### Return Value:
+
+none
+{% endtab %}
+
+{% tab title="Java" %}
+
+```
+// Some code
+```
+
+#### Parameters:
+
+none
+
+#### Return Value:
+
+none
+
+{% endtab %}
+
+{% tab title="GO" %}
+
+```
+// Some code
+```
+
+#### Parameters:
+
+none
+
+#### Return Value:
+
+none
+
+{% endtab %}
+{% endtabs %}
