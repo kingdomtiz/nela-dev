@@ -4,7 +4,7 @@
 
 Initialize the EDFS-SDK Native library.
 
-```
+```c
 INT32 TSK_Init();
 ```
 
@@ -35,7 +35,7 @@ The TSK\_Init interface is the EDFS-SDK initialization interface. All NativeApps
 
 Reverse the initialization of the EDFS-SDK Native library.
 
-```
+```c
 void TSK_UnInit();
 ```
 
@@ -63,7 +63,7 @@ DApp needs to call the TSK\_UnInit interface to complete the reverse initializat
 
 Get an array of random numbers of a specified length
 
-```
+```c
 INT32 TSK_GetRandomKey(UINT32 nKeyLen, BYTE * pKey);
 ```
 
@@ -95,7 +95,7 @@ The EDFS Native SDK library has a built-in random number generator, which can ge
 
 Initialize the EDFS-SDK Native library.
 
-```
+```c
 INT32 TSK_Init();
 ```
 
@@ -117,7 +117,7 @@ none
 
 Initialize the EDFS-SDK Native library.
 
-```
+```c
 INT32 TSK_Init();
 ```
 
@@ -139,7 +139,7 @@ none
 
 Initialize the EDFS-SDK Native library.
 
-```
+```c
 INT32 TSK_Init();
 ```
 
@@ -161,7 +161,7 @@ none
 
 Initialize the EDFS-SDK Native library.
 
-```
+```c
 INT32 TSK_Init();
 ```
 
@@ -183,7 +183,7 @@ none
 
 Initialize the EDFS-SDK Native library.
 
-```
+```c
 INT32 TSK_Init();
 ```
 
@@ -205,7 +205,7 @@ none
 
 Initialize the EDFS-SDK Native library.
 
-```
+```c
 INT32 TSK_Init();
 ```
 
@@ -227,7 +227,7 @@ none
 
 Initialize the EDFS-SDK Native library.
 
-```
+```c
 INT32 TSK_Init();
 ```
 
@@ -249,7 +249,7 @@ none
 
 Initialize the EDFS-SDK Native library.
 
-```
+```c
 INT32 TSK_Init();
 ```
 
@@ -271,7 +271,7 @@ none
 
 Initialize the EDFS-SDK Native library.
 
-```
+```c
 INT32 TSK_Init();
 ```
 
@@ -293,7 +293,7 @@ none
 
 Initialize the EDFS-SDK Native library.
 
-```
+```c
 INT32 TSK_Init();
 ```
 
@@ -315,7 +315,7 @@ none
 
 Initialize the EDFS-SDK Native library.
 
-```
+```c
 INT32 TSK_Init();
 ```
 
@@ -337,7 +337,7 @@ none
 
 Initialize the EDFS-SDK Native library.
 
-```
+```c
 INT32 TSK_Init();
 ```
 
@@ -359,7 +359,7 @@ none
 
 Initialize the EDFS-SDK Native library.
 
-```
+```c
 INT32 TSK_Init();
 ```
 
@@ -381,7 +381,7 @@ none
 
 Initialize the EDFS-SDK Native library.
 
-```
+```c
 INT32 TSK_Init();
 ```
 
@@ -403,7 +403,7 @@ none
 
 Initialize the EDFS-SDK Native library.
 
-```
+```c
 INT32 TSK_Init();
 ```
 
