@@ -22,7 +22,7 @@ _**Gy**：483ADA7726A3C4655DA4FBFC0E1108A8FD17B448A68554199C47D08FFB10D4B8_
 
 Generate (issue) an identity object
 
-```
+```c
 INT32 TSK_IdentityIssue(IdentityObject * pIdentity, BYTE* pSeed, UINT32 nSeedLen);
 ```
 
@@ -61,7 +61,7 @@ The identity key information of the user is always stored only in the device tru
 
 Generate (issue) an identity object and directly return a keystream form of the results
 
-```
+```c
 INT32 TSK_IdentityIssueEx(BYTE* pSeed, UINT32 nSeedLen,BYTE* pPublicKeyBuf, UINT32& nPublicKeyLen,BYTE* pPrivateKenBuf, UINT32& nPrivateKeyLen,BYTE* pKeyID);
 ```
 
@@ -104,7 +104,7 @@ The function of TSK\_IdentityIssueEx is the same as that of TSK\_IdentityIssue. 
 
 Release an identity object.
 
-```
+```c
 INT32 TSK_IdentityFree(IdentityObject identity);
 ```
 
@@ -134,7 +134,7 @@ Corresponding to the TSK\_IdentityIssue function, an opaque semantic user identi
 
 Export an identity object in binary form according to the specified nAction(public or private key).
 
-```
+```c
 INT32 TSK_IdentityExport(IdentityObject identity, BYTE nAction, UINT32 BufLen, BYTE * Buf, UINT32 * pWrittenLen);
 ```
 
@@ -176,7 +176,7 @@ Externally, the public key or private key corresponding to the identity can be e
 
 Recover identity objects from reading information from data.
 
-```
+```c
 INT32 TSK_IdentityImport(BYTE Action,UINT32 BufLen,BYTE*Buf,IdentityObject*pIdentity);
 ```
 
@@ -215,7 +215,7 @@ Corresponding to the TSK\_IdentityExport interface, import the binary stream dat
 
 Perform encryption and/or signing operations using identity objects.
 
-```
+```c
 INT32 TSK_IdentityEncrypt(IdentityObject identity, BYTE cryptAction, UINT32 nSrcFlowLen, BYTE * pSrcFlow, UINT32 nTarFlowLen, BYTE * pTarFlow, UINT32 * pTarFlowReturnLen);
 ```
 
@@ -266,7 +266,7 @@ Based on the characteristics of the ECC256 algorithm, each ECC256 encryption is 
 
 Perform decrypt/verify operations using identity objects.
 
-```
+```c
 INT32 TSK_IdentityDecrypt(IdentityObject identity, BYTE cryptAction, UINT32 nSrcFlowLen, BYTE * pSrcFlow, UINT32 nTarFlowLen, BYTE * pTarFlow, UINT32 * pTarFlowReturnLen);
 ```
 
