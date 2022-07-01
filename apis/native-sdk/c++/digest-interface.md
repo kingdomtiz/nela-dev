@@ -25,7 +25,7 @@ Taking the CRC digest algorithm as an example, the typical usage is as follows:
 
 Iterative support for CRC32 digests of multiple streams.
 
-```
+```c
 INT32 TSK_DigestCRC32(UINT32 nFlowLen, BYTE * pFlow, PVOID * pCookie, UINT32 * pCRC32);
 ```
 
@@ -62,7 +62,7 @@ CRC32 digest is a high-speed but unreliable digest algorithm that can be used to
 
 Iterative support for MD5 algorithm digests over multiple streams.
 
-```
+```c
 INT32 TSK_DigestMD5(UINT32 nFlowLen, BYTE * pFlow, PVOID * pCookie, BYTE * pMD5);
 ```
 
@@ -99,7 +99,7 @@ MD5 digest is a slow but reliable digest algorithm.
 
 Iterative support for SHA256 algorithm digests over multiple streams.
 
-```
+```c
 INT32 TSK_DigestSha256(UINT32 nFlowLen, BYTE * pFlow, PVOID * pCookie, BYTE * pSHA256);
 ```
 
