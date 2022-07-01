@@ -30,7 +30,7 @@ The file operation interface uses the task mechanism. An external file operation
 
 Initialize a file operation task.
 
-```
+```c
 INT32 TSK_FileOpTask_Init(INT32 nAction,INT32 nThreadCount);
 ```
 
@@ -67,7 +67,7 @@ The internal library will use the file as the unit, and the internal library wil
 
 Add a full path of the file/folder to be operated to the specified file operation task.
 
-```
+```c
 INT32 TSK_FileOpTask_PushAFileToTask(INT32 nTaskID, WCHAR* pSrcFullPath, WCHAR* pDstFullPath);
 ```
 
@@ -107,7 +107,7 @@ One file operation task can be operated to process multiple files/folders at the
 
 Add a pending identity item action to the specified file operation task.
 
-```
+```c
 INT32 TSK_FileOpTask_PushAAction(INT32 nTaskID, BOOLEAN bDelAdd, BYTE* IID, PermissionInfo nPermission, int nLastTime, BYTE* pKeyBuf, DWORD nKeyBufLen);
 ```
 
@@ -154,7 +154,7 @@ This function is only valid before the task is actually started. After the task 
 
 Set a file operation task signature action.
 
-```
+```c
 INT32 TSK_FileOpTask_SetShareSign(INT32 nTaskID, BYTE nSignAction);
 ```
 
@@ -192,7 +192,7 @@ This function is only valid before the task is actually started. After the task 
 
 Start a file operation task.
 
-```
+```c
 INT32 TSK_FileOpTask_StartATask(INT32 nTaskID);
 ```
 
@@ -221,7 +221,7 @@ After the file operation task starts, you cannot call the setting parameter inte
 
 ### Abort a File Operation Task
 
-```
+```c
 INT32 TSK_FileOpTask_CancelATask(INT32 nTaskID);
 ```
 
@@ -254,7 +254,7 @@ If the file operation task is canceled, the file status of the completed operati
 
 ### Delete a File Operation Task
 
-```
+```c
 INT32 TSK_FileOpTask_UnInitATask(INT32 nTaskID);
 ```
 
@@ -287,7 +287,7 @@ The task status is estimated and in progress. It is not allowed to delete. It ne
 
 Initialize the EDFS-SDK Native library.
 
-```
+```c
 INT32 TSK_FileOpTask_GetATaskState(INT32 nTaskID,INT32* nState,INT64* nTotalLength,INT64* nCurrentLength);
 ```
 
@@ -336,7 +336,7 @@ There is an abnormal situation to be processed outside the conversion percentage
 
 Get a file operation task report of final result.
 
-```
+```c
 INT32 TSK_FileOpTask_GetATaskReport(INT32 nTaskID, INT32 nReportMode, BYTE* pReportBuf, INT32* nReportBufLength);
 ```
 
@@ -403,7 +403,7 @@ Externally, you can first parse out the total number of file elements in count, 
 
 Check whether the file operation task module can exit.
 
-```
+```c
 INT32 TSK_FileOpTask_CanExit();
 ```
 
@@ -432,7 +432,7 @@ It is recommended that external users call this interface when the application e
 
 Adjust the specified encrypted header stream data through the given identity and related attributes, and return the new encrypted header stream data to the outside.
 
-```
+```c
 INT32 TSK_FileOp_AdjustByFlow(BYTE* pHeadSrc, INT32 nHeadFlowSrcLen, BYTE* pHeadFlowDst, INT32* nHeadFlowDstLen,BOOLEAN bDelAdd, BYTE* nIID, PermissionInfo nPermission, int nLastTime, BYTE* pKeyBuf, DWORD nKeyBufLen);
 ```
 
