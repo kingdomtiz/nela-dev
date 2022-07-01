@@ -14,7 +14,7 @@ However, when the user logs in, the user's own identity is used to log in to the
 
 Login to an account.
 
-```
+```c
 INT32 TSK_LoginUser(BYTE* nIdentityID);
 ```
 
@@ -42,7 +42,7 @@ INT32 TSK_LoginUser(BYTE* nIdentityID);
 
 Log out of the current account.
 
-```
+```c
 INT32 TSK_LogoutUser();
 ```
 
@@ -67,7 +67,7 @@ none
 
 Set the identity held by the current user of the EDFS-SDK library.
 
-```
+```c
 INT32 TSK_SetHoldIdentity(UINT32 nListVerb,BYTE* nIdentityID, PermissionInfo nPermission, int nLastTime,BYTE * pKeyBuf,INT32 nKeyLen);
 ```
 
@@ -112,7 +112,7 @@ Check the below for more information on nListVerb and the PermissionInfo structu
 {% tab title="nListVerb" %}
 nListVerb is defined as the following
 
-```
+```c
 #define LIST_VERB_DEFAULT 1 // Set the default default behavior
 #define LIST_VERB_CLEAR 2   // Clear the match list
 #define LIST_VERB_ADD 3     // Add matching items
@@ -138,7 +138,7 @@ When you want to clear the default identity, you should specify nIdentityID as I
 {% tab title="PermissionInfo" %}
 The PermissionInfo structure is the definition of identity permissions by the EDFS-SDK library. In essence, a 2-byte integer is used to represent the permissions owned by an identity. Currently, the EDFS-SDK library defines the following two permissions:
 
-```
+```c
 typedef struct _PermissionInfo{
     // Whether it is the Owner: 0 means non-Owner, 1 means Owner
     UINT16 bOwner : 1;
@@ -161,7 +161,7 @@ In language development that does not support structures, you can simply pass in
 
 Set default encrypted paragraphs (zone).
 
-```
+```c
 INT32 TSK_SetDefaultZone(INT64 nLen);
 ```
 
