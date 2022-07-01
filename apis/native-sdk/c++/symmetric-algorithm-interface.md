@@ -10,7 +10,7 @@ EDFS-SDK adopts the standard electronic envelope mode to protect digital files i
 
 Get all currently loaded algorithm descriptions.
 
-```
+```c
 INT32 TSK_GetCipherDesc(BYTE * pDescBuf,INT32 nDescBufLen);
 ```
 
@@ -54,7 +54,7 @@ The returned data is a collection of description information of all symmetric en
 
 Get a specified algorithm's details.
 
-```
+```c
 INT32 TSK_GetCipherInfo(BYTE * tagCipher,UINT16 * pKeyLength,UINT16 * pBlockSize);
 ```
 
@@ -90,7 +90,7 @@ The application layer can use this interface to determine the key size and packe
 
 Set the current default algorithm.
 
-```
+```c
 INT32 TSK_SetDefaultCipher(BYTE * tagCipher);
 ```
 
