@@ -111,7 +111,7 @@ INT32 TSK_DigestSha256(UINT32 nFlowLen, BYTE * pFlow, PVOID * pCookie, BYTE * pS
 * PVOID \*
   * pCookie \[IN/OUT] - Used to specify the cookie needed for iteration.
 * BYTE \*
-  * pSHA256 \[OUT] - filled with the final result of the iteration digest, as a 16-byte array.
+  * pSHA256 \[OUT] - Filled with the final result of the iteration digest, as a 16-byte array.
 
 </details>
 
