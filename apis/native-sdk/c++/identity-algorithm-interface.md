@@ -74,15 +74,15 @@ INT32 TSK_IdentityIssueEx(BYTE * pSeed, UINT32 nSeedLen, BYTE * pPublicKeyBuf, U
 * UINT32
   * nSeedLen \[IN] - The length of the seed information of the specified identity key information, in bytes.
 * BYTE \*
-  * pPublicKeyBuf \[IN/OUT] - identity public key information data stream.
+  * pPublicKeyBuf \[IN/OUT] - Identity public key information data stream.
 * UINT32 &
   * nPublicKeyLen \[IN/OUT] - The length of the external public key buffer.
 * BYTE \*
-  * pPrivateKeyBuf \[IN/OUT] - identity private key information data stream.
+  * pPrivateKeyBuf \[IN/OUT] - Identity private key information data stream.
 * UINT32 &
   * nPrivateKeyLen \[IN/OUT] - The length of the private key buffer passed in from the outside.
 * CHAR \*
-  * pKeyID \[IN/OUT] - identity key ID, fixed 20 bytes.
+  * pKeyID \[IN/OUT] - Identity key ID, fixed 20 bytes.
 
 </details>
 
@@ -113,7 +113,7 @@ INT32 TSK_IdentityFree(IdentityObject identity);
 <summary>Parameters</summary>
 
 * IdentityObject
-  * identity \[IN] - the identity object to release (opaque semantics).
+  * identity \[IN] - The identity object to release (opaque semantics).
 
 </details>
 
@@ -143,18 +143,18 @@ INT32 TSK_IdentityExport(IdentityObject identity, BYTE nAction, UINT32 BufLen, B
 <summary>Parameters</summary>
 
 * IdentityObject
-  * identity \[IN] - the target identity object (opaque semantics).
+  * identity \[IN] - The target identity object (opaque semantics).
 * BYTE
-  * nAction \[IN] - the action selection:
+  * nAction \[IN] - The action selection:
     * 1 means public key,
     * 2 means private key,
     * 3 means key identity ID
 * UINT32
-  * BufLen \[IN] - the receive buffer size of the data to output.
+  * BufLen \[IN] - The receive buffer size of the data to output.
 * BYTE \*
-  * Buf \[OUT] - the receive buffer of the data to be output.
+  * Buf \[OUT] - The receive buffer of the data to be output.
 * UINT32 \*
-  * pWrittenLen \[IN/OUT] - the size of the actual output data returned.
+  * pWrittenLen \[IN/OUT] - The size of the actual output data returned.
 
 </details>
 
@@ -185,15 +185,15 @@ INT32 TSK_IdentityImport(BYTE Action, UINT32 BufLen, BYTE * Buf, IdentityObject 
 <summary>Parameters</summary>
 
 * BYTE
-  * Action \[IN] - the action selection:
+  * Action \[IN] - The action selection:
     * 1 means public key
     * 2 means private key
 * UINT32
-  * BufLen \[IN] - the externally prepared buffer size.
+  * BufLen \[IN] - The externally prepared buffer size.
 * BYTE \*
-  * Buf - an externally prepared identity key binary stream data.
+  * Buf \[OUT] - An externally prepared identity key binary stream data.
 * IdentityObject \*
-  * pIdentity - the restored identity object (opaque semantics) \[OUT]
+  * pIdentity \[OUT] - The restored identity object (opaque semantics).
 
 </details>
 
@@ -202,7 +202,7 @@ INT32 TSK_IdentityImport(BYTE Action, UINT32 BufLen, BYTE * Buf, IdentityObject 
 <summary>Return Values</summary>
 
 * INT32
-  * KError\_Success success
+  * KError\_Success, success
   * KError\_Other, other errors, usually memory allocation errors (or insufficient buffers)
 
 </details>
@@ -224,21 +224,21 @@ INT32 TSK_IdentityEncrypt(IdentityObject identity, BYTE cryptAction, UINT32 nSrc
 <summary>Parameters</summary>
 
 * IdentityObject
-  * identity - the identity object (opaque) being used \[IN]
-* CHAR
-  * cryptAction - the action selected: \[IN]
+  * identity \[IN] - The identity object (opaque) being used.
+* BYTE
+  * cryptAction \[IN] - The action selected:
     * 1 means public key
     * 2 means private key
 * UINT32
-  * nSrcFlowLen - specifies the buffer length of the original stream \[IN]
-* CHAR \*
-  * pSrcFlow - specifies the raw stream buffer \[IN]
+  * nSrcFlowLen \[IN] - Specifies the buffer length of the original stream.
+* BYTE \*
+  * pSrcFlow - \[IN] Specifies the raw stream buffer.
 * UINT32
-  * nTarFlowLen - specifies the buffer length of the target stream after receiving processing \[IN/OUT]
+  * nTarFlowLen \[IN/OUT] - Specifies the buffer length of the target stream after receiving processing.
 * CHAR \*
-  * pTarFlow - specifies the buffer area for receiving the processed target stream \[IN/OUT]
+  * pTarFlow \[IN/OUT] - Specifies the buffer area for receiving the processed target stream.
 * UINT32 \*
-  * pTarFlowReturnLen - the length of the returned target stream \[OUT]
+  * pTarFlowReturnLen \[OUT] - The length of the returned target stream.
 
 </details>
 
@@ -247,7 +247,7 @@ INT32 TSK_IdentityEncrypt(IdentityObject identity, BYTE cryptAction, UINT32 nSrc
 <summary>Return Values</summary>
 
 * INT32
-  * KError\_Success success
+  * KError\_Success, success
   * KError\_Other, other errors, usually memory allocation errors (or insufficient buffers)
 
 </details>
@@ -275,21 +275,21 @@ INT32 TSK_IdentityDecrypt(IdentityObject identity, BYTE cryptAction, UINT32 nSrc
 <summary>Parameters</summary>
 
 * IdentityObject
-  * identity - the identity object (opaque) to be used \[IN]
-* CHAR
-  * cryptAction - the operation selection: \[IN]
-    * 1 means decryption with the public key (sign verification),
+  * identity \[IN] - The identity object (opaque) to be used.
+* BYTE
+  * cryptAction \[IN] - The operation selection:
+    * 1 means decryption with the public key (sign verification)
     * 2 means decryption with the private key
 * UINT32
-  * nSrcFlowLen - specifies the buffer length of the original stream \[IN]
-* CHAR \*
-  * pSrcFlow - specifies the raw stream buffer \[IN]
+  * nSrcFlowLen \[IN] - Specifies the buffer length of the original stream.
+* BYTE \*
+  * pSrcFlow \[IN] - Specifies the raw stream buffer.
 * UINT32
-  * nTarFlowLen - specifies the buffer length of the target stream after receiving processing \[IN/OUT]
-* CHAR \*
-  * pTarFlow - specifies the buffer area for receiving the processed target stream \[IN/OUT]
+  * nTarFlowLen \[IN/OUT] - Specifies the buffer length of the target stream after receiving processing.
+* BYTE \*
+  * pTarFlow \[IN/OUT] - Specifies the buffer area for receiving the processed target stream.
 * UINT32 \*
-  * pTarFlowReturnLen - the length of the returned target stream \[OUT]
+  * pTarFlowReturnLen \[OUT] - The length of the returned target stream.
 
 </details>
 
@@ -298,7 +298,7 @@ INT32 TSK_IdentityDecrypt(IdentityObject identity, BYTE cryptAction, UINT32 nSrc
 <summary>Return Values</summary>
 
 * INT32
-  * KError\_Success success
+  * KError\_Success, success
   * KError\_Other, other errors, usually memory allocation errors (or insufficient buffers)
 
 </details>
