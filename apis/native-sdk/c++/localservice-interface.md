@@ -15,7 +15,7 @@ INT32 TSK_LocalServer_Start(INT32 nPort);
 <summary>Parameters</summary>
 
 * INT32
-  * nPort, the port specified by LocalServer \[IN]
+  * nPort \[IN] - The port specified by LocalServer.
 
 </details>
 
@@ -67,7 +67,7 @@ void TSK_LocalServer_SetSystemTime(INT32 nTime);
 <summary>Parameters</summary>
 
 * INT32
-  * nTime - the system time set externally. Set the time as the number of seconds since midnight on January 1, 1970 (4-byte integer).
+  * nTime \[IN] - The system time set externally. Set the time as the number of seconds since midnight on January 1, 1970 (4-byte integer).
 
 </details>
 
@@ -91,8 +91,8 @@ bool TSK_LocalServer_GetSessionKey(char pSessionKey[20]);
 
 <summary>Parameters</summary>
 
-* CHAR
-  * pSessionKey, externally prepared buffer area for receiving SessionKey \[IN/OUT]
+* CHAR [20]
+  * pSessionKey \[IN/OUT] - Externally prepared buffer area for receiving SessionKey.
 
 </details>
 
@@ -115,8 +115,8 @@ For the convenience of external use, pSessionKey has been fixed as a visible str
 Set the basic parameters of the current service dapp website.
 
 ```c
-void TSK_LocalServer_SetCurrentWebSiteParam(WCHAR* strRootDir,WCHAR*
-strDynamicFlag,WCHAR* strRemoteServer,WCHAR* strIndexFileName,WCHAR*
+void TSK_LocalServer_SetCurrentWebSiteParam(WCHAR * strRootDir, WCHAR *
+strDynamicFlag, WCHAR * strRemoteServer, WCHAR * strIndexFileName, WCHAR *
 strPemFilePath);
 ```
 
@@ -125,15 +125,15 @@ strPemFilePath);
 <summary>Parameters</summary>
 
 * WCHAR \*
-  * strRootDir - the full path information of the root directory of the current dapp website \[IN]
+  * strRootDir \[IN] - The full path information of the root directory of the current dapp website.
 * WCHAR \*
-  * strDynamicFlag - dynamic request flag, LocalServer will use this flag to determine whether to forward the request to the corresponding server. If you need to support local LocalServer dynamic request forwarding, the dapp development process should strictly abide by the request specification defined by itself. The dynamic request flag can have Multiple, separated by |, for example /d|/api|/opt, localserver requires that the dynamic request ID must be at the beginning of the requested Uri
+  * strDynamicFlag \[IN] - Dynamic request flag, LocalServer will use this flag to determine whether to forward the request to the corresponding server. If you need to support local LocalServer dynamic request forwarding, the dapp development process should strictly abide by the request specification defined by itself. The dynamic request flag can have Multiple, separated by |, for example /d|/api|/opt, localserver requires that the dynamic request ID must be at the beginning of the requested URI.
 * WCHAR \*
-  * strRemoteServer - dynamic request forwarding remote server
+  * strRemoteServer \[IN] - Dynamic request forwarding remote server.
 * WCHAR \*
-  * strIndexFileName - the home page of the local dapp, NULL can be passed, and index.html is used as the home page by default
+  * strIndexFileName \[IN] - The home page of the local dapp, NULL can be passed, and index.html is used as the home page by default.
 * WCHAR \*
-  * strPemFilePath - if the remote server address is configured as https, the SSL public key of the server needs to be provided to LocalServer in the form of a standard pem certificate file
+  * strPemFilePath \[IN] - If the remote server address is configured as https, the SSL public key of the server needs to be provided to LocalServer in the form of a standard pem certificate file.
 
 </details>
 
