@@ -23,7 +23,7 @@ INT32 TSK_LoginUser(BYTE* nIdentityID);
 <summary>Parameters</summary>
 
 * CHAR \*
-  * nIdentityID - the corresponding internal ID representing the unique identity of the user
+  * nIdentityID - The corresponding internal ID representing the unique identity of the user
 
 </details>
 
@@ -68,7 +68,7 @@ none
 Set the identity held by the current user of the EDFS-SDK library.
 
 ```c
-INT32 TSK_SetHoldIdentity(UINT32 nListVerb,BYTE* nIdentityID, PermissionInfo nPermission, int nLastTime,BYTE * pKeyBuf,INT32 nKeyLen);
+INT32 TSK_SetHoldIdentity(UINT32 nListVerb, BYTE * nIdentityID, PermissionInfo nPermission, int nLastTime, BYTE * pKeyBuf, INT32 nKeyLen);
 ```
 
 <details>
@@ -76,17 +76,17 @@ INT32 TSK_SetHoldIdentity(UINT32 nListVerb,BYTE* nIdentityID, PermissionInfo nPe
 <summary>Parameters</summary>
 
 * UINT32
-  * nListVerb - a standard list manipulation verb, no LIST\_VERB\_MODIFY semantics \[IN]
-* CHAR \*
-  * nIdentityID - the ID of this identity \[IN]
+  * nListVerb \[IN] - A standard list manipulation verb, no LIST\_VERB\_MODIFY semantics.
+* BYTE \*
+  * nIdentityID \[IN] - The ID of this identity.
 * PermissionInfo
-  * nPermission - the permission corresponding to the identity, the identity held by the user has all permissions by default, and needs to be set externally \[IN]
+  * nPermission \[IN] - The permission corresponding to the identity, the identity held by the user has all permissions by default, and needs to be set externally.
 * INT
-  * nLastTime - the expiration date of the file when the public key of the identity is used for default encryption, please be sure to pass in -1, the creator of the file has the permission to use it indefinitely \[IN]
-* CHAR \*
-  * pKeyBuf - the key binary format information of the identity, byte unit \[IN]
+  * nLastTime \[IN] - The expiration date of the file when the public key of the identity is used for default encryption, please be sure to pass in -1, the creator of the file has the permission to use it indefinitely.
+* BYTE \*
+  * pKeyBuf \[IN] - The key binary format information of the identity, byte unit.
 * INT32
-  * nKeyLen - the length of the key binary format information of the identity, in bytes \[IN]
+  * nKeyLen \[IN] - The length of the key binary format information of the identity, in bytes.
 
 </details>
 
@@ -95,7 +95,7 @@ INT32 TSK_SetHoldIdentity(UINT32 nListVerb,BYTE* nIdentityID, PermissionInfo nPe
 <summary>Return Values</summary>
 
 * INT32
-  * KError\_Success, success;
+  * KError\_Success, success
   * KError\_NoUser, failed, there is no currently logged in user;
   * KError\_SyntaxError, failure, syntax error (such as unsupported verb, etc.);
   * KError\_MultiObject, failure, semantic error, the Key already exists (the identity ID already exists);
@@ -170,7 +170,7 @@ INT32 TSK_SetDefaultZone(INT64 nLen);
 <summary>Parameters</summary>
 
 * INT32
-  * nLen - the size (byte count) of the default encrypted paragraph to set \[IN]
+  * nLen \[IN] - The size (byte count) of the default encrypted paragraph to set.
 
 </details>
 
@@ -179,8 +179,8 @@ INT32 TSK_SetDefaultZone(INT64 nLen);
 <summary>Return Values</summary>
 
 * INT32
-  * KError\_Success, success;
-  * KError\_Other, other errors, usually memory allocation errors (or insufficient buffers);
+  * KError\_Success, success
+  * KError\_Other, other errors, usually memory allocation errors (or insufficient buffers)
 
 </details>
 
