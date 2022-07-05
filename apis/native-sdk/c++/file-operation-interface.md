@@ -31,7 +31,7 @@ The file operation interface uses the task mechanism. An external file operation
 Initialize a file operation task.
 
 ```c
-INT32 TSK_FileOpTask_Init(INT32 nAction,INT32 nThreadCount);
+INT32 TSK_FileOpTask_Init(INT32 nAction, INT32 nThreadCount);
 ```
 
 <details>
@@ -39,12 +39,12 @@ INT32 TSK_FileOpTask_Init(INT32 nAction,INT32 nThreadCount);
 <summary>Parameters</summary>
 
 * INT32
-  * nAction - the specific operation corresponding to this file operation task \[IN]
+  * nAction \[IN] - The specific operation corresponding to this file operation task.
     * 1 encryption&#x20;
     * 2 decryption&#x20;
     * 3 distribution
 * INT32
-  * nThreadCount - the number of threads to be started for this file operation task, the default value is 1 \[IN]
+  * nThreadCount \[IN] - The number of threads to be started for this file operation task, the default value is 1.
 
 </details>
 
@@ -68,7 +68,7 @@ The internal library will use the file as the unit, and the internal library wil
 Add a full path of the file/folder to be operated to the specified file operation task.
 
 ```c
-INT32 TSK_FileOpTask_PushAFileToTask(INT32 nTaskID, WCHAR* pSrcFullPath, WCHAR* pDstFullPath);
+INT32 TSK_FileOpTask_PushAFileToTask(INT32 nTaskID, WCHAR * pSrcFullPath, WCHAR * pDstFullPath);
 ```
 
 <details>
@@ -76,11 +76,11 @@ INT32 TSK_FileOpTask_PushAFileToTask(INT32 nTaskID, WCHAR* pSrcFullPath, WCHAR* 
 <summary>Parameters</summary>
 
 * INT32
-  * nTaskID - the specified file operation task ID\[IN]
+  * nTaskID \[IN] - The specified file operation task ID.
 * WCHAR \*
-  * pSrcFullPath-  the full path information of the source file/folder to be operated \[IN]
+  * pSrcFullPath \[IN] - The full path information of the source file/folder to be operated.
 * WCHAR \*
-  * pDstFullPath - the full path information of the target file/folder to be operated \[IN]
+  * pDstFullPath \[IN] - The full path information of the target file/folder to be operated.
 
 </details>
 
@@ -89,7 +89,7 @@ INT32 TSK_FileOpTask_PushAFileToTask(INT32 nTaskID, WCHAR* pSrcFullPath, WCHAR* 
 <summary>Return Values</summary>
 
 * INT32
-  * KError\_Success success
+  * KError\_Success, success
 
 </details>
 
@@ -108,7 +108,7 @@ One file operation task can be operated to process multiple files/folders at the
 Add a pending identity item action to the specified file operation task.
 
 ```c
-INT32 TSK_FileOpTask_PushAAction(INT32 nTaskID, BOOLEAN bDelAdd, BYTE* IID, PermissionInfo nPermission, int nLastTime, BYTE* pKeyBuf, DWORD nKeyBufLen);
+INT32 TSK_FileOpTask_PushAAction(INT32 nTaskID, BOOLEAN bDelAdd, BYTE * IID, PermissionInfo nPermission, int nLastTime, BYTE * pKeyBuf, DWORD nKeyBufLen);
 ```
 
 <details>
@@ -116,19 +116,19 @@ INT32 TSK_FileOpTask_PushAAction(INT32 nTaskID, BOOLEAN bDelAdd, BYTE* IID, Perm
 <summary>Parameters</summary>
 
 * INT32
-  * nTaskID - the specified file operation task ID\[IN]
+  * nTaskID \[IN] - The specified file operation task ID.
 * BOOLEAN
-  * bDelAdd - add or delete an identity in the identity area, true, add, false, delete \[IN]IID, the 20-byte identity ID information of the identity to be operated \[IN]
-* CHAR \*
-  * IID - identity ID \[IN]
+  * bDelAdd \[IN] - Add or delete an identity in the identity area, true, add, false, delete \[IN]IID, the 20-byte identity ID information of the identity to be operated.
+* BYTE \*
+  * IID \[IN] - Identity ID.
 * PermissionInfo
-  * nPermission - the permission information of the identity to be operated, when deleting the identity action, this parameter is meaningless, you can pass an empty permission \[IN]
+  * nPermission \[IN] - The permission information of the identity to be operated, when deleting the identity action, this parameter is meaningless, you can pass an empty permission.
 * INT
-  * nLastTime - the last use time limit information of the identity to be operated, when deleting the identity action, this parameter is meaningless, you can pass 0 \[IN]
-* CHAR \*
-  * pKeyBuf - the public key information of the identity to be operated, when deleting the identity action, this parameter is meaningless, you can pass NULL \[IN]
+  * nLastTime \[IN] - The last use time limit information of the identity to be operated, when deleting the identity action, this parameter is meaningless, you can pass 0.
+* BYTE \*
+  * pKeyBuf \[IN] - The public key information of the identity to be operated, when deleting the identity action, this parameter is meaningless, you can pass NULL.
 * DWORD
-  * nKeyBufLen - the public key length information of the identity to be operated, when deleting the identity action, this parameter is meaningless, you can pass 0 \[IN]
+  * nKeyBufLen \[IN] - The public key length information of the identity to be operated, when deleting the identity action, this parameter is meaningless, you can pass 0.
 
 </details>
 
@@ -137,7 +137,7 @@ INT32 TSK_FileOpTask_PushAAction(INT32 nTaskID, BOOLEAN bDelAdd, BYTE* IID, Perm
 <summary>Return Values</summary>
 
 * INT32
-  * KError\_Success, success;
+  * KError\_Success, success
   * Others are failures, please refer to the standard return value definition of the EDFS Native SDK library
 
 </details>
@@ -163,9 +163,9 @@ INT32 TSK_FileOpTask_SetShareSign(INT32 nTaskID, BYTE nSignAction);
 <summary>Parameters</summary>
 
 * INT32
-  * nTaskID - the specified file operation task ID \[IN]
-* CHAR
-  * nSignAction - the signature action information \[IN]
+  * nTaskID \[IN] - The specified file operation task ID.
+* BYTE
+  * nSignAction \[IN] - The signature action information.
     * 0 is to keep the signature information
     * 1 is to set the signature information
     * 2 is to clear the signature information
@@ -177,7 +177,7 @@ INT32 TSK_FileOpTask_SetShareSign(INT32 nTaskID, BYTE nSignAction);
 <summary>Return Values</summary>
 
 * INT32
-  * KError\_Success success
+  * KError\_Success, success
   * Others are failures, please refer to the standard return value definition of the EDFS Native SDK library
 
 </details>
@@ -201,7 +201,7 @@ INT32 TSK_FileOpTask_StartATask(INT32 nTaskID);
 <summary>Parameters</summary>
 
 * INT32
-  * nTaskID - the specified file operation task ID \[IN]
+  * nTaskID \[IN] - The specified file operation task ID.
 
 </details>
 
@@ -210,7 +210,7 @@ INT32 TSK_FileOpTask_StartATask(INT32 nTaskID);
 <summary>Return Values</summary>
 
 * INT32
-  * KError\_Success success
+  * KError\_Success, success
   * Others are failures, please refer to the standard return value definition of the EDFS Native SDK library
 
 </details>
@@ -230,7 +230,7 @@ INT32 TSK_FileOpTask_CancelATask(INT32 nTaskID);
 <summary>Parameters</summary>
 
 * INT32
-  * nTaskID - the specified file operation task ID \[IN]
+  * nTaskID \[IN] - The specified file operation task ID.
 
 </details>
 
@@ -239,7 +239,7 @@ INT32 TSK_FileOpTask_CancelATask(INT32 nTaskID);
 <summary>Return Values</summary>
 
 * INT32
-  * KError\_Success success
+  * KError\_Success, success
   * Others are failures, please refer to the standard return value definition of the EDFS Native SDK library
 
 </details>
@@ -263,7 +263,7 @@ INT32 TSK_FileOpTask_UnInitATask(INT32 nTaskID);
 <summary>Parameters</summary>
 
 * INT32
-  * nTaskID - the specified file operation task ID \[IN]
+  * nTaskID \[IN] - The specified file operation task ID.
 
 </details>
 
@@ -272,7 +272,7 @@ INT32 TSK_FileOpTask_UnInitATask(INT32 nTaskID);
 <summary>Return Values</summary>
 
 * INT32
-  * KError\_Success success
+  * KError\_Success, success
   * Others are failures, please refer to the standard return value definition of the EDFS Native SDK library
 
 </details>
@@ -288,7 +288,7 @@ The task status is estimated and in progress. It is not allowed to delete. It ne
 Initialize the EDFS-SDK Native library.
 
 ```c
-INT32 TSK_FileOpTask_GetATaskState(INT32 nTaskID,INT32* nState,INT64* nTotalLength,INT64* nCurrentLength);
+INT32 TSK_FileOpTask_GetATaskState(INT32 nTaskID, INT32 * nState, INT64 * nTotalLength, INT64 * nCurrentLength);
 ```
 
 <details>
@@ -296,13 +296,13 @@ INT32 TSK_FileOpTask_GetATaskState(INT32 nTaskID,INT32* nState,INT64* nTotalLeng
 <summary>Parameters</summary>
 
 * INT32
-  * nTaskID - the specified file operation task ID\[IN]
+  * nTaskID \[IN] - The specified file operation task ID.
 * INT32 \*
-  * nState - the current state of the specified file operation task \[OUT]
+  * nState \[OUT] - The current state of the specified file operation task.
 * INT64 \*
-  * nTotalLength - specifies the total length of data to be processed (in bytes) for file operation tasks \[OUT]
+  * nTotalLength \[OUT] - Specifies the total length of data to be processed (in bytes) for file operation tasks.
 * INT64 \*
-  * nCurrentLength - specifies the currently processed data length (in bytes) of the file operation task \[out]
+  * nCurrentLength \[OUT] - Specifies the currently processed data length (in bytes) of the file operation task.
 
 </details>
 
@@ -311,7 +311,7 @@ INT32 TSK_FileOpTask_GetATaskState(INT32 nTaskID,INT32* nState,INT64* nTotalLeng
 <summary>Return Values</summary>
 
 * INT32
-  * KError\_Success success
+  * KError\_Success, success
   * Others are failures, please refer to the standard return value definition of the EDFS Native SDK library
 
 </details>
@@ -337,7 +337,7 @@ There is an abnormal situation to be processed outside the conversion percentage
 Get a file operation task report of final result.
 
 ```c
-INT32 TSK_FileOpTask_GetATaskReport(INT32 nTaskID, INT32 nReportMode, BYTE* pReportBuf, INT32* nReportBufLength);
+INT32 TSK_FileOpTask_GetATaskReport(INT32 nTaskID, INT32 nReportMode, BYTE * pReportBuf, INT32 * nReportBufLength);
 ```
 
 <details>
@@ -345,13 +345,13 @@ INT32 TSK_FileOpTask_GetATaskReport(INT32 nTaskID, INT32 nReportMode, BYTE* pRep
 <summary>Parameters</summary>
 
 * INT32
-  * nTaskID - the specified file operation task ID\[IN]
+  * nTaskID \[IN] - The specified file operation task ID.
 * INT32
-  * nReportMode - result report mode \[IN]
-* CHAR \*
-  * pReportBuf - the buffer area of the externally prepared reception result report \[IN/OUT]
+  * nReportMode \[IN] - Result report mode.
+* BYTE \*
+  * pReportBuf \[IN/OUT] - The buffer area of the externally prepared reception result report.
 * INT32 \*
-  * nReportBufLength - the buffer length of the externally prepared reception result report \[IN/OUT]
+  * nReportBufLength \[IN/OUT] - The buffer length of the externally prepared reception result report.
 
 </details>
 
@@ -433,33 +433,33 @@ It is recommended that external users call this interface when the application e
 Adjust the specified encrypted header stream data through the given identity and related attributes, and return the new encrypted header stream data to the outside.
 
 ```c
-INT32 TSK_FileOp_AdjustByFlow(BYTE* pHeadSrc, INT32 nHeadFlowSrcLen, BYTE* pHeadFlowDst, INT32* nHeadFlowDstLen,BOOLEAN bDelAdd, BYTE* nIID, PermissionInfo nPermission, int nLastTime, BYTE* pKeyBuf, DWORD nKeyBufLen);
+INT32 TSK_FileOp_AdjustByFlow(BYTE * pHeadSrc, INT32 nHeadFlowSrcLen, BYTE * pHeadFlowDst, INT32 * nHeadFlowDstLen, BOOLEAN bDelAdd, BYTE * nIID, PermissionInfo nPermission, int nLastTime, BYTE * pKeyBuf, DWORD nKeyBufLen);
 ```
 
 <details>
 
 <summary>Parameters</summary>
 
-* CHAR \*
-  * pHeadFlowSrc - external incoming raw encrypted header flow data \[IN]
+* BYTE \*
+  * pHeadFlowSrc \[IN] - External incoming raw encrypted header flow data.
 * INT32
-  * nHeadFlowSrcLen - the length information of the original encrypted header flow data incoming from the outside \[IN]
-* CHAR \*
-  * pHeadFlowDst - externally prepared to receive the adjusted encrypted header flow data buffer \[IN/OUT]
-* CHAR \*
-  * nHeadFlowDstLen - the adjusted length of encrypted header flow data \[IN/OUT]
+  * nHeadFlowSrcLen \[IN] - The length information of the original encrypted header flow data incoming from the outside.
+* BYTE \*
+  * pHeadFlowDst \[IN/OUT] - Externally prepared to receive the adjusted encrypted header flow data buffer.
+* INT32 \*
+  * nHeadFlowDstLen \[IN/OUT] - The adjusted length of encrypted header flow data.
 * BOOLEAN
-  * bDelAdd - whether to add or delete the envelope to the encrypted header identity area, true to add, false to delete \[IN]
-* CHAR \*
-  * nIID - the identity ID to be modified \[IN]
+  * bDelAdd \[IN] - Whether to add or delete the envelope to the encrypted header identity area, true to add, false to delete.
+* BYTE \*
+  * nIID \[IN] - The identity ID to be modified.
 * PermissionInfo
-  * nPermission - the permission corresponding to the identity to be modified \[IN]
+  * nPermission \[IN] - The permission corresponding to the identity to be modified.
 * INT
-  * nLastTime - the last file usage time of the identity to be modified \[IN]
-* CHAR \*
-  * pKeyBuf - the key buffer of the identity to be modified \[IN]
-* DWARD
-  * nKeyBufLen - the key buffer length of the identity to be modified \[IN]
+  * nLastTime \[IN] - The last file usage time of the identity to be modified.
+* BYTE \*
+  * pKeyBuf \[IN] - The key buffer of the identity to be modified.
+* DWORD
+  * nKeyBufLen \[IN] - The key buffer length of the identity to be modified.
 
 </details>
 
