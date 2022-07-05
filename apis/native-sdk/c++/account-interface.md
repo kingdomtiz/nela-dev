@@ -15,15 +15,15 @@ However, when the user logs in, the user's own identity is used to log in to the
 Login to an account.
 
 ```c
-INT32 TSK_LoginUser(BYTE* nIdentityID);
+INT32 TSK_LoginUser(BYTE * nIdentityID);
 ```
 
 <details>
 
 <summary>Parameters</summary>
 
-* CHAR \*
-  * nIdentityID - The corresponding internal ID representing the unique identity of the user
+* BYTE \*
+  * nIdentityID \[IN] - The corresponding internal ID representing the unique identity of the user.
 
 </details>
 
