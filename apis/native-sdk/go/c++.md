@@ -61,7 +61,7 @@ DApp needs to call the TSK\_UnInit interface to complete the reverse initializat
 
 ### Get a random key
 
-Get an array of random numbers of a specified length.
+Get an array of random numbers of a specified length
 
 ```c
 INT32 TSK_GetRandomKey(UINT32 nKeyLen, BYTE * pKey);
@@ -72,9 +72,9 @@ INT32 TSK_GetRandomKey(UINT32 nKeyLen, BYTE * pKey);
 <summary>Parameters</summary>
 
 * UINT32
-  * nKeyLen - The length of the random key.
-* BYTE \*
-  * pKey - Pointer to the address to save the random key.
+  * The length of the random key.
+* Char \*
+  * Pointer to the address to save the random key
 
 </details>
 

@@ -31,13 +31,13 @@ INT32 TSK_DigestCRC32(UINT32 nFlowLen, BYTE * pFlow, PVOID * pCookie, UINT32 * p
 <summary>Parameters</summary>
 
 * UINT32
-  * nFlowLen \[IN] - Used to specify the size of the stream for which the CRC32 digest is to be calculated.
-* BYTE \*
-  * pFlow \[IN] - Used to specify the stream for which the CRC32 digest is to be calculated.
-* PVOID \*
-  * pCookie \[IN/OUT] - Used to specify the cookie needed for iteration.
+  * nFlowLen - is to specify the size of the stream for which the CRC32 digest is to be calculated \[IN]
+* CHAR \*
+  * pFlow - is to specify the stream for which the CRC32 digest is to be calculated \[IN]
+* VOID \*
+  * pCookie - specify the cookie needed for iteration \[IN/OUT]
 * UINT32 \*
-  * pCRC32 \[OUT] - Padded with the final result of the iterative digest, a 32-bit CRC32 value.
+  * pCRC32 - padded with the final result of the iterative digest, a 32-bit CRC32 value \[OUT]
 
 </details>
 
@@ -46,8 +46,8 @@ INT32 TSK_DigestCRC32(UINT32 nFlowLen, BYTE * pFlow, PVOID * pCookie, UINT32 * p
 <summary>Return Values</summary>
 
 * INT32
-  * KError\_Success, success
-  * KError\_Other, failed, other errors
+  * KError\_Success success
+  * KError\_Other, failed, other errors;
 
 </details>
 
@@ -68,13 +68,13 @@ INT32 TSK_DigestMD5(UINT32 nFlowLen, BYTE * pFlow, PVOID * pCookie, BYTE * pMD5)
 <summary>Parameters</summary>
 
 * UINT32
-  * nFlowLen \[IN] - Used to specify the size of the stream for which the MD5 digest is to be calculated.
-* BYE \*
-  * pFlow \[IN] - Used to specify the stream for which the MD5 digest is to be calculated.
-* PVOID \*
-  * pCookie \[IN/OUT] - Used to specify the cookie needed for iteration.
-* BYTE \*
-  * pMD5 \[OUT] - Filled with the final result of the iteration digest, as a 16-byte array.
+  * nFlowLen - is to specify the size of the stream for which the MD5 digest is to be calculated \[IN]
+* CHAR \*
+  * pFlow - is to specify the stream for which the MD5 digest is to be calculated \[IN]
+* VOID \*
+  * pCookie - specify the cookie needed for iteration \[IN/OUT]
+* CHAR \*
+  * pMD5 - filled with the final result of the iteration digest, as a 16-byte array \[OUT]
 
 </details>
 
@@ -83,8 +83,8 @@ INT32 TSK_DigestMD5(UINT32 nFlowLen, BYTE * pFlow, PVOID * pCookie, BYTE * pMD5)
 <summary>Return Values</summary>
 
 * INT32
-  * KError\_Success, success
-  * KError\_Other, failed, other errors
+  * KError\_Success success
+  * KError\_Other, failed, other errors;
 
 </details>
 
@@ -105,13 +105,13 @@ INT32 TSK_DigestSha256(UINT32 nFlowLen, BYTE * pFlow, PVOID * pCookie, BYTE * pS
 <summary>Parameters</summary>
 
 * UINT32
-  * nFlowLen \[IN] - Used to specify the size of the stream for which the SHA256 digest is to be calculated.
-* BYTE \*
-  * pFlow \[IN] - Used to specify the stream for which the SHA256 digest is to be calculated.
-* PVOID \*
-  * pCookie \[IN/OUT] - Used to specify the cookie needed for iteration.
-* BYTE \*
-  * pSHA256 \[OUT] - filled with the final result of the iteration digest, as a 16-byte array.
+  * nFlowLen - is to specify the size of the stream for which the SHA256 digest is to be calculated \[IN]
+* CHAR \*
+  * pFlow - is to specify the stream for which the SHA256 digest is to be calculated \[IN]
+* VOID \*
+  * pCookie - specify the cookie needed for iteration \[IN/OUT]
+* CHAR \*
+  * pSHA256 - filled with the final result of the iteration digest, as a 16-byte array \[OUT]
 
 </details>
 
@@ -120,8 +120,8 @@ INT32 TSK_DigestSha256(UINT32 nFlowLen, BYTE * pFlow, PVOID * pCookie, BYTE * pS
 <summary>Return Values</summary>
 
 * INT32
-  * KError\_Success, success
-  * KError\_Other, failed, other errors
+  * KError\_Success success
+  * KError\_Other, failed, other errors;
 
 </details>
 
