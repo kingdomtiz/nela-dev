@@ -11,17 +11,17 @@ EDFS-SDK adopts the standard electronic envelope mode to protect digital files i
 Get all currently loaded algorithm descriptions.
 
 ```c
-INT32 TSK_GetCipherDesc(BYTE * pDescBuf,INT32 nDescBufLen);
+INT32 TSK_GetCipherDesc(BYTE * pDescBuf, INT32 nDescBufLen);
 ```
 
 <details>
 
 <summary>Parameters</summary>
 
-* CHAR \*
-  * pDescBuf - an externally prepared buffer for receiving reports (it is recommended to apply for an 8K (8192) byte length buffer the first time) \[IN/OUT]
+* BYTE \*
+  * pDescBuf \[IN/OUT] - An externally prepared buffer for receiving reports (it is recommended to apply for an 8K (8192) byte length buffer the first time).
 * INT32
-  * nDescBufLen - the buffer length prepared externally to receive the report (the recommended first length is 8192 bytes) \[IN]
+  * nDescBufLen \[IN] - The buffer length prepared externally to receive the report (the recommended first length is 8192 bytes).
 
 </details>
 
@@ -55,19 +55,19 @@ The returned data is a collection of description information of all symmetric en
 Get a specified algorithm's details.
 
 ```c
-INT32 TSK_GetCipherInfo(BYTE * tagCipher,UINT16 * pKeyLength,UINT16 * pBlockSize);
+INT32 TSK_GetCipherInfo(BYTE * tagCipher, UINT16 * pKeyLength, UINT16 * pBlockSize);
 ```
 
 <details>
 
 <summary>Parameters</summary>
 
-* CHAR \*
-  * tagCipher - the algorithm tag to be obtained (that is, the GUID label of the algorithm), which is fixed to 16 bytes (this parameter can be NULL, indicating that the default algorithm is specified) \[IN]
+* BYTE \*
+  * tagCipher \[IN] - The algorithm tag to be obtained (that is, the GUID label of the algorithm), which is fixed to 16 bytes (this parameter can be NULL, indicating that the default algorithm is specified).
 * UINT16 \*
-  * pKeyLength - returns the key length (in bytes) required by the algorithm \[IN/OUT]
+  * pKeyLength \[IN/OUT] - Returns the key length (in bytes) required by the algorithm.
 * UINT16 \*
-  * pBlockSize - the block size required by the algorithm (calculated in bytes, so the sequence algorithm returns 1) \[IN/OUT]
+  * pBlockSize \[IN/OUT] - The block size required by the algorithm (calculated in bytes, so the sequence algorithm returns 1).
 
 </details>
 
@@ -76,7 +76,7 @@ INT32 TSK_GetCipherInfo(BYTE * tagCipher,UINT16 * pKeyLength,UINT16 * pBlockSize
 <summary>Return Values</summary>
 
 * INT32
-  * KError\_Success success
+  * KError\_Success, success
   * KError\_CipherError, failed, the algorithm could not be found
   * KError\_Other, other errors, usually memory allocation errors (or insufficient buffers)
 
@@ -98,8 +98,8 @@ INT32 TSK_SetDefaultCipher(BYTE * tagCipher);
 
 <summary>Parameters</summary>
 
-* CHAR \*
-  * tagCipher - the algorithm tag to be obtained (that is, the GUID label of the algorithm), which is fixed to 16 bytes (this parameter can be NULL, indicating that the default algorithm is specified) \[IN]
+* BYTE \*
+  * tagCipher \[IN] - The algorithm tag to be obtained (that is, the GUID label of the algorithm), which is fixed to 16 bytes (this parameter can be NULL, indicating that the default algorithm is specified).
 
 </details>
 
@@ -108,7 +108,7 @@ INT32 TSK_SetDefaultCipher(BYTE * tagCipher);
 <summary>Return Values</summary>
 
 * INT32
-  * KError\_Success success
+  * KError\_Success, success
   * KError\_CipherError, failed, the algorithm could not be found;
   * KError\_Other, other errors, usually memory allocation errors (or insufficient buffers);
 
