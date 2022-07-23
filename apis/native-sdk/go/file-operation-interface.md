@@ -31,19 +31,19 @@ The file operation interface uses the task mechanism. An external file operation
 Initialize a file operation task.
 
 ```c
-INT32 TSK_FileOpTask_Init(INT32 nAction,INT32 nThreadCount);
+TSK_FileOpTask_Init(nAction int, nThreadCount int) int
 ```
 
 <details>
 
 <summary>Parameters</summary>
 
-* INT32
+* INT
   * nAction - the specific operation corresponding to this file operation task \[IN]
     * 1 encryption
     * 2 decryption
     * 3 distribution
-* INT32
+* INT
   * nThreadCount - the number of threads to be started for this file operation task, the default value is 1 \[IN]
 
 </details>
@@ -52,7 +52,7 @@ INT32 TSK_FileOpTask_Init(INT32 nAction,INT32 nThreadCount);
 
 <summary>Return Values</summary>
 
-* INT32
+* INT
   * Less than 0 indicates that the initialization of the file operation task failed, and no subsequent operations are required. Greater than or equal to 0 indicates that the initialization was successful, and the **task ID** corresponding to the file operation task is returned. All subsequent operations and control of the file operation task are performed through the task ID.
 
 </details>
@@ -68,18 +68,18 @@ The internal library will use the file as the unit, and the internal library wil
 Add a full path of the file/folder to be operated to the specified file operation task.
 
 ```c
-INT32 TSK_FileOpTask_PushAFileToTask(INT32 nTaskID, WCHAR* pSrcFullPath, WCHAR* pDstFullPath);
+TSK_FileOpTask_PushAFileToTask(nTaskID int, pSrcFilePath []byte, pDstFilePath []byte) int 
 ```
 
 <details>
 
 <summary>Parameters</summary>
 
-* INT32
+* INT
   * nTaskID - the specified file operation task ID\[IN]
-* WCHAR \*
+* \[ ] BYTE
   * pSrcFullPath- the full path information of the source file/folder to be operated \[IN]
-* WCHAR \*
+* \[ ] BYTE
   * pDstFullPath - the full path information of the target file/folder to be operated \[IN]
 
 </details>
@@ -88,7 +88,7 @@ INT32 TSK_FileOpTask_PushAFileToTask(INT32 nTaskID, WCHAR* pSrcFullPath, WCHAR* 
 
 <summary>Return Values</summary>
 
-* INT32
+* INT
   * KError\_Success success
 
 </details>
@@ -108,26 +108,26 @@ One file operation task can be operated to process multiple files/folders at the
 Add a pending identity item action to the specified file operation task.
 
 ```c
-INT32 TSK_FileOpTask_PushAAction(INT32 nTaskID, BOOLEAN bDelAdd, BYTE* IID, PermissionInfo nPermission, int nLastTime, BYTE* pKeyBuf, DWORD nKeyBufLen);
+TSK_FileOpTask_PushAAction(nTaskID int, bDelAdd bool, IID []byte, nPermission int16, nLastTime int, pKeyBuf []byte, nKeyBufLen int) int
 ```
 
 <details>
 
 <summary>Parameters</summary>
 
-* INT32
+* INT
   * nTaskID - the specified file operation task ID\[IN]
-* BOOLEAN
+* BOOL
   * bDelAdd - add or delete an identity in the identity area, true, add, false, delete \[IN]IID, the 20-byte identity ID information of the identity to be operated \[IN]
-* CHAR \*
+* \[ ] BYTE
   * IID - identity ID \[IN]
-* PermissionInfo
+* INT16
   * nPermission - the permission information of the identity to be operated, when deleting the identity action, this parameter is meaningless, you can pass an empty permission \[IN]
 * INT
   * nLastTime - the last use time limit information of the identity to be operated, when deleting the identity action, this parameter is meaningless, you can pass 0 \[IN]
-* CHAR \*
+* \[ ] BYTE
   * pKeyBuf - the public key information of the identity to be operated, when deleting the identity action, this parameter is meaningless, you can pass NULL \[IN]
-* DWORD
+* INT
   * nKeyBufLen - the public key length information of the identity to be operated, when deleting the identity action, this parameter is meaningless, you can pass 0 \[IN]
 
 </details>
@@ -136,7 +136,7 @@ INT32 TSK_FileOpTask_PushAAction(INT32 nTaskID, BOOLEAN bDelAdd, BYTE* IID, Perm
 
 <summary>Return Values</summary>
 
-* INT32
+* INT
   * KError\_Success, success;
   * Others are failures, please refer to the standard return value definition of the EDFS Native SDK library
 
@@ -155,16 +155,16 @@ This function is only valid before the task is actually started. After the task 
 Set a file operation task signature action.
 
 ```c
-INT32 TSK_FileOpTask_SetShareSign(INT32 nTaskID, BYTE nSignAction);
+TSK_FileOpTask_SetShareSign(nTaskID int, nSignAction int ) int
 ```
 
 <details>
 
 <summary>Parameters</summary>
 
-* INT32
+* INT
   * nTaskID - the specified file operation task ID \[IN]
-* CHAR
+* INT
   * nSignAction - the signature action information \[IN]
     * 0 is to keep the signature information
     * 1 is to set the signature information
@@ -176,7 +176,7 @@ INT32 TSK_FileOpTask_SetShareSign(INT32 nTaskID, BYTE nSignAction);
 
 <summary>Return Values</summary>
 
-* INT32
+* INT
   * KError\_Success success
   * Others are failures, please refer to the standard return value definition of the EDFS Native SDK library
 
@@ -193,14 +193,14 @@ This function is only valid before the task is actually started. After the task 
 Start a file operation task.
 
 ```c
-INT32 TSK_FileOpTask_StartATask(INT32 nTaskID);
+TSK_FileOpTask_StartATask(nTaskID int) int 
 ```
 
 <details>
 
 <summary>Parameters</summary>
 
-* INT32
+* INT
   * nTaskID - the specified file operation task ID \[IN]
 
 </details>
@@ -209,7 +209,7 @@ INT32 TSK_FileOpTask_StartATask(INT32 nTaskID);
 
 <summary>Return Values</summary>
 
-* INT32
+* INT
   * KError\_Success success
   * Others are failures, please refer to the standard return value definition of the EDFS Native SDK library
 
@@ -222,14 +222,14 @@ After the file operation task starts, you cannot call the setting parameter inte
 ### Abort a File Operation Task
 
 ```c
-INT32 TSK_FileOpTask_CancelATask(INT32 nTaskID);
+TSK_FileOpTask_CancelATask(nTaskID int) int 
 ```
 
 <details>
 
 <summary>Parameters</summary>
 
-* INT32
+* INT
   * nTaskID - the specified file operation task ID \[IN]
 
 </details>
@@ -238,7 +238,7 @@ INT32 TSK_FileOpTask_CancelATask(INT32 nTaskID);
 
 <summary>Return Values</summary>
 
-* INT32
+* INT
   * KError\_Success success
   * Others are failures, please refer to the standard return value definition of the EDFS Native SDK library
 
@@ -255,14 +255,14 @@ If the file operation task is canceled, the file status of the completed operati
 ### Delete a File Operation Task
 
 ```c
-INT32 TSK_FileOpTask_UnInitATask(INT32 nTaskID);
+TSK_FileOpTask_UnInitATask(nTaskID int) int
 ```
 
 <details>
 
 <summary>Parameters</summary>
 
-* INT32
+* INT
   * nTaskID - the specified file operation task ID \[IN]
 
 </details>
@@ -271,7 +271,7 @@ INT32 TSK_FileOpTask_UnInitATask(INT32 nTaskID);
 
 <summary>Return Values</summary>
 
-* INT32
+* INT
   * KError\_Success success
   * Others are failures, please refer to the standard return value definition of the EDFS Native SDK library
 
@@ -288,21 +288,15 @@ The task status is estimated and in progress. It is not allowed to delete. It ne
 Initialize the EDFS-SDK Native library.
 
 ```c
-INT32 TSK_FileOpTask_GetATaskState(INT32 nTaskID,INT32* nState,INT64* nTotalLength,INT64* nCurrentLength);
+TSK_FileOpTask_GetATaskState(nTaskID int) (int, int64, int64, int) 
 ```
 
 <details>
 
 <summary>Parameters</summary>
 
-* INT32
+* INT
   * nTaskID - the specified file operation task ID\[IN]
-* INT32 \*
-  * nState - the current state of the specified file operation task \[OUT]
-* INT64 \*
-  * nTotalLength - specifies the total length of data to be processed (in bytes) for file operation tasks \[OUT]
-* INT64 \*
-  * nCurrentLength - specifies the currently processed data length (in bytes) of the file operation task \[out]
 
 </details>
 
@@ -310,7 +304,13 @@ INT32 TSK_FileOpTask_GetATaskState(INT32 nTaskID,INT32* nState,INT64* nTotalLeng
 
 <summary>Return Values</summary>
 
-* INT32
+* INT
+  * nTotalLength - specifies the total length of data to be processed (in bytes) for file operation tasks \[OUT]
+* INT64
+  * nCurrentLength - specifies the currently processed data length (in bytes) of the file operation task \[OUT]
+* NT64
+  * nState - the current state of the specified file operation task \[OUT]
+* INT
   * KError\_Success success
   * Others are failures, please refer to the standard return value definition of the EDFS Native SDK library
 

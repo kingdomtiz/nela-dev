@@ -23,21 +23,19 @@ Taking the CRC digest algorithm as an example, the typical usage is as follows:
 Iterative support for CRC32 digests of multiple streams.
 
 ```c
-INT32 TSK_DigestCRC32(UINT32 nFlowLen, BYTE * pFlow, PVOID * pCookie, UINT32 * pCRC32);
+TSK_DigestCRC32(nFlowLen uint, pFlow []byte, pCookie uint64) (uint, int) 
 ```
 
 <details>
 
 <summary>Parameters</summary>
 
-* UINT32
+* UINT
   * nFlowLen - is to specify the size of the stream for which the CRC32 digest is to be calculated \[IN]
-* CHAR \*
+* \[ ] BYTE
   * pFlow - is to specify the stream for which the CRC32 digest is to be calculated \[IN]
-* VOID \*
+* UINT 64
   * pCookie - specify the cookie needed for iteration \[IN/OUT]
-* UINT32 \*
-  * pCRC32 - padded with the final result of the iterative digest, a 32-bit CRC32 value \[OUT]
 
 </details>
 
@@ -45,7 +43,9 @@ INT32 TSK_DigestCRC32(UINT32 nFlowLen, BYTE * pFlow, PVOID * pCookie, UINT32 * p
 
 <summary>Return Values</summary>
 
-* INT32
+* UINT
+  * pCRC32 - padded with the final result of the iterative digest, a 32-bit CRC32 value \[OUT]
+* INT
   * KError\_Success success
   * KError\_Other, failed, other errors;
 
@@ -60,21 +60,19 @@ CRC32 digest is a high-speed but unreliable digest algorithm that can be used to
 Iterative support for MD5 algorithm digests over multiple streams.
 
 ```c
-INT32 TSK_DigestMD5(UINT32 nFlowLen, BYTE * pFlow, PVOID * pCookie, BYTE * pMD5);
+TSK_DigestMD5(nFlowLen uint, pFlow []byte, pCookie uint64) ([]byte, int) 
 ```
 
 <details>
 
 <summary>Parameters</summary>
 
-* UINT32
+* UINT
   * nFlowLen - is to specify the size of the stream for which the MD5 digest is to be calculated \[IN]
-* CHAR \*
+* \[ ] BYTE
   * pFlow - is to specify the stream for which the MD5 digest is to be calculated \[IN]
-* VOID \*
+* UINT64
   * pCookie - specify the cookie needed for iteration \[IN/OUT]
-* CHAR \*
-  * pMD5 - filled with the final result of the iteration digest, as a 16-byte array \[OUT]
 
 </details>
 
@@ -82,7 +80,9 @@ INT32 TSK_DigestMD5(UINT32 nFlowLen, BYTE * pFlow, PVOID * pCookie, BYTE * pMD5)
 
 <summary>Return Values</summary>
 
-* INT32
+* \[ ] BYTE
+  * pMD5 - filled with the final result of the iteration digest, as a 16-byte array \[OUT]
+* INT
   * KError\_Success success
   * KError\_Other, failed, other errors;
 
@@ -97,21 +97,19 @@ MD5 digest is a slow but reliable digest algorithm.
 Iterative support for SHA256 algorithm digests over multiple streams.
 
 ```c
-INT32 TSK_DigestSha256(UINT32 nFlowLen, BYTE * pFlow, PVOID * pCookie, BYTE * pSHA256);
+TSK_DigestSha256(priAddresslen uint, bytePriAddress []byte, pCookie uint64) ([]byte, int)
 ```
 
 <details>
 
 <summary>Parameters</summary>
 
-* UINT32
-  * nFlowLen - is to specify the size of the stream for which the SHA256 digest is to be calculated \[IN]
-* CHAR \*
-  * pFlow - is to specify the stream for which the SHA256 digest is to be calculated \[IN]
-* VOID \*
+* UINT
+  * priAddresslen - is to specify the size of the stream for which the SHA256 digest is to be calculated \[IN]
+* \[ ] BYTE
+  * bytePriAddress - is to specify the stream for which the SHA256 digest is to be calculated \[IN]
+* UINT64
   * pCookie - specify the cookie needed for iteration \[IN/OUT]
-* CHAR \*
-  * pSHA256 - filled with the final result of the iteration digest, as a 16-byte array \[OUT]
 
 </details>
 
@@ -119,7 +117,9 @@ INT32 TSK_DigestSha256(UINT32 nFlowLen, BYTE * pFlow, PVOID * pCookie, BYTE * pS
 
 <summary>Return Values</summary>
 
-* INT32
+* \[ ] BYTE
+  * pSHA256 - the final result filled with the iterative digest, as a 32-byte array \[OUT]
+* INT
   * KError\_Success success
   * KError\_Other, failed, other errors;
 
