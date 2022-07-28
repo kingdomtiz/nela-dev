@@ -337,21 +337,19 @@ There is an abnormal situation to be processed outside the conversion percentage
 Get a file operation task report of final result.
 
 ```c
-INT32 TSK_FileOpTask_GetATaskReport(INT32 nTaskID, INT32 nReportMode, BYTE* pReportBuf, INT32* nReportBufLength);
+TSK_FileOpTask_GetATaskReport(nTaskID int, nReportMode int, reportLen int) ([]byte, int, int) 
 ```
 
 <details>
 
 <summary>Parameters</summary>
 
-* INT32
+* INT
   * nTaskID - the specified file operation task ID\[IN]
-* INT32
+* INT
   * nReportMode - result report mode \[IN]
-* CHAR \*
-  * pReportBuf - the buffer area of the externally prepared reception result report \[IN/OUT]
-* INT32 \*
-  * nReportBufLength - the buffer length of the externally prepared reception result report \[IN/OUT]
+* INT
+  * reportLen - the max length of the report (recommended is 8192 Bytes) \[IN/OUT]
 
 </details>
 
@@ -359,7 +357,11 @@ INT32 TSK_FileOpTask_GetATaskReport(INT32 nTaskID, INT32 nReportMode, BYTE* pRep
 
 <summary>Return Values</summary>
 
-* INT32
+* \[ ] BYTE
+  * pReportBuf - the buffer area of the externally prepared reception result report \[IN/OUT]
+* INT
+  * nReportBufLength - the actual length of the externally prepared reception result report \[IN/OUT]
+* INT
   * KError\_Success success
   * Others are failures, please refer to the standard return value definition of the EDFS Native SDK library
 
@@ -404,7 +406,7 @@ Externally, you can first parse out the total number of file elements in count, 
 Check whether the file operation task module can exit.
 
 ```c
-INT32 TSK_FileOpTask_CanExit();
+TSK_FileOpTask_CanExit() int 
 ```
 
 <details>
@@ -419,7 +421,7 @@ none
 
 <summary>Return Values</summary>
 
-* INT32
+* INT
   * 0 means that there is currently a task being executed and cannot be exited, 1 means that all the current tasks are executed and the program can be exited.
 
 </details>
@@ -433,33 +435,29 @@ It is recommended that external users call this interface when the application e
 Adjust the specified encrypted header stream data through the given identity and related attributes, and return the new encrypted header stream data to the outside.
 
 ```c
-INT32 TSK_FileOp_AdjustByFlow(BYTE* pHeadSrc, INT32 nHeadFlowSrcLen, BYTE* pHeadFlowDst, INT32* nHeadFlowDstLen,BOOLEAN bDelAdd, BYTE* nIID, PermissionInfo nPermission, int nLastTime, BYTE* pKeyBuf, DWORD nKeyBufLen);
+TSK_FileOp_AdjustByFlow(headSrc []byte, srcLen int, bDelAdd bool, userid []byte, nPermission int16, lasttime int, pubkey []byte, pubkeylen int) ([]byte, C.int, int) 
 ```
 
 <details>
 
 <summary>Parameters</summary>
 
-* CHAR \*
-  * pHeadFlowSrc - external incoming raw encrypted header flow data \[IN]
-* INT32
-  * nHeadFlowSrcLen - the length information of the original encrypted header flow data incoming from the outside \[IN]
-* CHAR \*
-  * pHeadFlowDst - externally prepared to receive the adjusted encrypted header flow data buffer \[IN/OUT]
-* CHAR \*
-  * nHeadFlowDstLen - the adjusted length of encrypted header flow data \[IN/OUT]
-* BOOLEAN
+* \[ ] BYTE
+  * headSrc - external incoming raw encrypted header flow data \[IN]
+* INT
+  * srcLen - the length information of the original encrypted header flow data incoming from the outside \[IN]
+* BOOL
   * bDelAdd - whether to add or delete the envelope to the encrypted header identity area, true to add, false to delete \[IN]
-* CHAR \*
-  * nIID - the identity ID to be modified \[IN]
-* PermissionInfo
+* \[ ] BYTE&#x20;
+  * userid - the identity ID to be modified \[IN]
+* INT16
   * nPermission - the permission corresponding to the identity to be modified \[IN]
 * INT
-  * nLastTime - the last file usage time of the identity to be modified \[IN]
-* CHAR \*
+  * lasttime - the last file usage time of the identity to be modified \[IN]
+* \[ ] BYTE
   * pKeyBuf - the key buffer of the identity to be modified \[IN]
-* DWARD
-  * nKeyBufLen - the key buffer length of the identity to be modified \[IN]
+* INT
+  * pubkeylen -&#x20;
 
 </details>
 
@@ -467,7 +465,11 @@ INT32 TSK_FileOp_AdjustByFlow(BYTE* pHeadSrc, INT32 nHeadFlowSrcLen, BYTE* pHead
 
 <summary>Return Values</summary>
 
-* INT32
+* \[ ] BYTE
+  * pHeadFlowDst, externally prepared to receive the adjusted encrypted header flow data buffer \[OUT]
+* C.INT
+  * nHeadFlowDstLen, the adjusted length of encrypted header flow data \[OUT]
+* INT
   * Return the result of the operation, refer to the definition of the return result of the TSK library
 
 </details>
